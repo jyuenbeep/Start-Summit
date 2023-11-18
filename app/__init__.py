@@ -57,18 +57,16 @@ html_template = """
         <div>
             <image src="static/my_plot.png" class="img-fluid"></image>
             <h1 class="text-center">Statistics Table</h1>
-            <form action="/stats" method="POST">
-                <label for="recordMin">Minimum # of Records Lost</label><br>
-                <div class="slider-container">
-                    <input type="range" min="100000" max="5000000" value="100000" class="form-range" id="recordMin" name="recordMin">
-                    <span id="recordMin_value"></span>
+            <form action="/tablePage" method="POST" class="d-flex align-items-center flex-column">
+                <div class="slider-container d-flex justify-content-center" style="width:100%">
+                    <label for="recordMin"><b>Minimum # of Records Lost</b></label> : <span id="recordMin_value"></span>
+                    <input type="range" min="100000" max="5000000" value="100000" class="form-range" id="recordMin" name="recordMin" style="width:80%">
                 </div>
-                <label for="yearMin">Start Year</label><br>
-                <div class="slider-container">
-                    <input type="range" min="2011" max="2022" value="2011" class="form-range" id="yearMin" name="yearMin">
-                    <span id="yearMin_value"></span>
+                <div class="slider-container d-flex justify-content-center" style="width:100%">
+                    <label for="yearMin"><b>Start Year</b></label> : <span id="yearMin_value"></span>
+                    <input type="range" min="2011" max="2022" value="2011" class="form-range" id="yearMin" name="yearMin" style="width:80%">
                 </div>
-                <button type="submit" class="btn" value="submit"> Submit Table </button>
+                <button type="submit" class="btn btn-secondary btn-lg btn-sm" value="submit"> Submit Table </button><br>
             </form>
         </div>
         <div>
@@ -147,6 +145,10 @@ def genpasspage():
 
 @app.route("/stats", methods=["GET", "POST"])
 def statspage():
+    return render_template("stats.html")
+
+@app.route("/tablePage", methods=["GET", "POST"])
+def statsTablePage():
     if (request.method=="POST"):
         recordMin = int(request.form.get("recordMin"))
         yearMin = int(request.form.get("yearMin"))
@@ -156,11 +158,11 @@ def statspage():
         plot(arr, len(arr[0]))
         # making table and overwriting into HTML
         table = makeRecordTable(recordMin, yearMin)
-        writeHTML(html_template.format(DATA_TABLE=table), "stats.html")
+        writeHTML(html_template.format(DATA_TABLE=table), "table.html")
     else:
         table = makeRecordTable(0, 0)
-        writeHTML(html_template.format(DATA_TABLE=table), "stats.html")
-    return render_template("stats.html")
+        writeHTML(html_template.format(DATA_TABLE=table), "table.html")
+    return render_template("table.html")
     
 # RUN ================================================================================
 

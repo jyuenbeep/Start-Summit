@@ -1,200 +1,39 @@
-
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="../static/js/slider.js" defer> </script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Trends of Vulnerable Data in Big Corporations</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><strong>SECUREHUB</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/stats">Statistics</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/quiz">Quiz</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/aboutus">About Us</a>
-                </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/stats">STATISTICS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/resources">RESOURCES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/password">PASSWORDS</a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/quiz">QUIZ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/aboutus">ABOUT US</a>
+              </li>
             </ul>
-        </div>
-        </nav>
-        </div>
-        <div>
-            <image src="static/my_plot.png" class="img-fluid"></image>
-            <h1 class="text-center">Statistics Table</h1>
-            <form action="/stats" method="POST">
-                <label for="recordMin">Minimum # of Records Lost</label><br>
-                <div class="slider-container">
-                    <input type="range" min="100000" max="5000000" value="100000" class="form-range" id="recordMin" name="recordMin">
-                    <span id="recordMin_value"></span>
-                </div>
-                <label for="yearMin">Start Year</label><br>
-                <div class="slider-container">
-                    <input type="range" min="2011" max="2022" value="2011" class="form-range" id="yearMin" name="yearMin">
-                    <span id="yearMin_value"></span>
-                </div>
-                <button type="submit" class="btn" value="submit"> Submit Table </button>
-            </form>
-        </div>
-        <div>
-            <table class="table table-hover">
-                
-        <tr class="thead-dark">
-            <th scope="row">Organization</th>
-            <th># of Records Lost</th>
-            <th>Date of Breach</th>
-        </tr>
-    
-        <tr>
-            <th scope="row">Plex</th>
-            <td>15,000,000</td>
-            <td>Aug 2022</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Twitter</th>
-            <td>5,400,000</td>
-            <td>Dec 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Shanghai Police</th>
-            <td>500,000,000</td>
-            <td>Jul 2022</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">CDEK</th>
-            <td>18,218,203</td>
-            <td>Mar 2022</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Robinhood</th>
-            <td>5,000,937</td>
-            <td>Nov 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Twitch</th>
-            <td>10,000,000</td>
-            <td>Oct 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Syniverse</th>
-            <td>500,000,000</td>
-            <td>Sep 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Pandora Papers</th>
-            <td>11,900,000</td>
-            <td>Oct 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Neiman Marcus</th>
-            <td>4,600,000</td>
-            <td>Sep 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Epik</th>
-            <td>15,000,000</td>
-            <td>Sep 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Thailand visitors</th>
-            <td>100,000,000</td>
-            <td>Sep 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">T-Mobile </th>
-            <td>76,000,000</td>
-            <td>Aug 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Contact tracing data</th>
-            <td>38,000,000</td>
-            <td>Aug 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Linkedin</th>
-            <td>700,000,000</td>
-            <td>Jul 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">MacDonalds</th>
-            <td>10,000,000</td>
-            <td>Jun 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Air India</th>
-            <td>4,500,000</td>
-            <td>May 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Amazon Reviews</th>
-            <td>13,124,962</td>
-            <td>May 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Digital Ocean</th>
-            <td>10,000,000</td>
-            <td>Apr 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Park Mobile</th>
-            <td>21,000,000</td>
-            <td>Apr 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Ubiquiti</th>
-            <td>16,000,000</td>
-            <td>Feb 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Experian Brazil</th>
-            <td>220,000,000</td>
-            <td>Feb 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Star Alliance</th>
-            <td>16,000,000</td>
-            <td> Mar 2021</td>
-        </tr>
-        
-        <tr>
-            <th scope="row">Facebook</th>
-            <td>533,000,000</td>
-            <td> Mar 2021</td>
-        </tr>
-        
-            </table>
-        </div>
+          </div>
+          </nav>
+        stats page
+        <h1>for more detailed statistics, click <a href="/tablePage">here</a></h1>
     </body>
 </html>
