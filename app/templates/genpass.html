@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="/genpass" method="POST">
+            <div>
+                <label for="user_input">Generate a Password!</label>
+                <input type="text" id="user_input" name="user_input">
+            </div>
+            <button type="submit" class="btn" value="submit"> Generate </button>
+        </form>
+        <div>
+            <h2>your password is:</h2>
+            <h3>{{NEW_PASS}}</h3>
+        </div>
+    </body>
+</html>
