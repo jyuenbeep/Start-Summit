@@ -1,7 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
 
 <head>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><strong>SECUREHUB</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/stats">STATISTICS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/quiz">QUIZ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/aboutus">ABOUT US<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 	<title>Cybersecurity Quiz</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +35,10 @@
 
 
 	<!-- stylesheet -->
-	<link rel="stylesheet" href="quiz_style.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_style.css') }}">
 
 	<!-- javascript -->
-	<script src="quiz_script.js" defer>
+	<script src="{{ url_for('static', filename='js/quiz_script.js') }}" defer>
 
 	</script>
 
@@ -21,28 +47,48 @@
 <body>
 
 	<header>
-		<h1>Simple Cybersecurity Quiz</h1>
-		<p>Let's see how well protected and informed you are in cybersecurity!!</p>
+    <title>Text alignment</title> 
+    <style> 
+        h1{text-align: center;} 
+    </style> 
+		<h1><p style="font-family:Helvetica"><p style="font-size: 25px;"><strong>SIMPLE CYBERSECURITY QUIZ</strong></p></p></h1>
+    <div class="col-5">
+    <p><p style="font-family:Helvetica">Let's see how well protected and informed you are in cybersecurity!!</p></p>
+</div>
 	</header>
 
 	<main>
-
-		<h2>Do you use a password manager?</h2>
+    <div class="row-1">
+      <div class="column-3">
+    <div class="container">
+        <div class="card">
+    <div class="col-3">
+		<h2><p style="font-family:Helvetica"><p style="font-size: 20px;">Do you use a password manager?</p></p></h2>
 		<div class="question">
-
+    
 			<div class="answer-choice">
         <button id="q1a1">Yes</button>
       </div>
-
+      
       <div class="answer-choice">
         <button id="q1a2">No</button>
       </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
 
     </div> 
-
-    <h2>Do you allow cookies?</h2>
+    <div class="row-1">
+      <div class="column-3">
+    <div class="container">
+        <div class="card">
+    <div class="col-5">
+    <h2><p style="font-family:Helvetica"><p style="font-size: 20px;">Do you allow cookies?</p></p></h2>
     <div class="question">
-
+    </div>
       <div class="answer-choice">
         <button id="q2a1">Yes</button>
       </div>
@@ -52,8 +98,8 @@
       </div>
 
     </div> 
-    
-    <h2>Do you turn on 2FA or multifactor authentication?</h2>
+    <div class="col-5">
+    <h2><p style="font-family:Helvetica"><p style="font-size: 20px;">Do you turn on 2FA or multifactor authentication?</p></p></h2>
     <div class="question">
 
       <div class="answer-choice">
@@ -66,7 +112,7 @@
 
     </div> 
     
-    <h2>Do you use a VPN?</h2>
+    <h2><p style="font-family:Helvetica"><p style="font-size: 20px;">Do you use a VPN?</p></p></h2>
     <div class = "question">
   
       <div class = "answer-choice">
@@ -79,7 +125,7 @@
 
     </div> 
 
-    <h2>Do you update your software?</h2>
+    <h2><p style="font-family:Helvetica"><p style="font-size: 20px;">Do you update your software?</p></p></h2>
     <div class = "question">
   
       <div class = "answer-choice">
@@ -92,7 +138,7 @@
 
     </div> 
 
-    <h2>Which one is secure?</h2>
+    <h2><p style="font-family:Helvetica"><p style="font-size: 20px;">Which one is secure?</p></p></h2>
     <div class = "question">
   
       <div class = "answer-choice">
@@ -106,7 +152,7 @@
     </div> 
 
     
-    <h2>Do you check links before you click on them?</h2>
+    <h2<p style="font-family:Helvetica"><p style="font-size: 20px;">Do you check links before you click on them?</p></p></h2>
     <div class = "question">
   
       <div class = "answer-choice">
@@ -119,7 +165,7 @@
 
     </div> 
 
-    <h2>Do you use anti-virus protection?</h2>
+    <h2><p style="font-family:Helvetica"><p style="font-size: 20px;">Do you use anti-virus protection?</p></p></h2>
     <div class = "question">
   
       <div class = "answer-choice">
@@ -133,11 +179,27 @@
     </div> 
 
     
-    <h2 id="result">Your result is...</h2>
+    <h2 id="result"><p style="font-family:Helvetica"><p style="font-size: 20px;">Your result is...</p></p></h2>
     
     <button id="restart"> Restart </button>
+
+    <h2><p style="font-family:Helvetica"><p style="font-size: 20px;">Do you need more resources?</p></p></h2>
+    
+    <button id="myButton" class="float-left submit-button" >Resources</button>
+
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "/resources";
+        };
+    </script>
       
   </main>
 
   </body>
+  <body style="background-color:#7c8276">
 </html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>

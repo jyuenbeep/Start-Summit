@@ -1,12 +1,12 @@
 /* STYLE SECTIONING TAGS */
 body {
-    font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+    font-family: "Helvetica";
     margin: 2em;
-    text-align: center;
+    /* text-align: center; */
   }
   
   main {
-    text-align: center;
+    /* text-align: center; */
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -16,14 +16,14 @@ body {
   /* STYLE TEXT */
   h1 {
     font-style: bold;
-    color: #0d9c90;
-    text-align: center;
+    /* color: #0d9c90; */
+    /* text-align: center; */
     
   }
   
   h2 {
     margin-top: 2em; 
-    color: #12635c;
+    /* color: #12635c; */
   }
   
   p {
@@ -31,7 +31,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    max-width: 60%;
+    /* max-width: 60%; */
   }
   
   /* STYLE FLEX CONTAINER */
@@ -62,10 +62,10 @@ body {
   }
   
   button {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border: none;
-    color: #12635c;
-    border: 2px solid #12635c;
+    /* color: #12635c; */
+    /* border: 2px solid #12635c; */
     border-radius: 5px;
     padding: 10px;
     text-align: center;
