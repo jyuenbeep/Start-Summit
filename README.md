@@ -8,21 +8,20 @@ Large Companies—such as Meta—need to prioritize ethical methods to gain prof
 **PROBLEM:**
 
 >How might we encourage transparency for large corporations so that they would put ethical values over profit?
-</br>
+
 </br>
 
 
 **WHY?:** 
 
 >Due to the rise of dependency on technology, big corporations are enticed into relying on unethical methods to gain profit
-</br>
+
 </br>
 
 
 **SOLUTION:** 
 
 >Educate users/population on the damade of vulnerable data to pressure big corporations to priporitize values over profit to encourage transparency
-</br>
 
 </br>
 
