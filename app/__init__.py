@@ -4,7 +4,7 @@ from flask import request
 from flask import session
 import sqlite3
 from db import model_specified
-from password import create_password
+from password import create_password, analyze_password
 
 app = Flask(__name__)
 app.secret_key = "23bd2dcea35c795e204d397157f3d55bf1afda7db6519a46f9d1e5a5f02ed45b"
@@ -78,9 +78,14 @@ def aboutpage():
 def resourcespage():
     return render_template('resources.html')
 
-@app.route("/analyzepass", methods=['GET'])
+@app.route("/analyzepass", methods=['GET', 'POST'])
 def analyzepasspage():
-    return render_template('analyzepass.html')
+    feedback = ""
+    if (request.method=="POST"):
+        uInput = request.form.get("user_input")
+        if (uInput!=""):
+            feedback = analyze_password(uInput)
+    return render_template('analyzepass.html', FEEDBACK=feedback)
 
 @app.route("/genpass", methods=['GET', 'POST'])
 def genpasspage():

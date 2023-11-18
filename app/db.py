@@ -29,9 +29,11 @@ def model_specified(colArr, recordMin):
                         dataDict[orgName].append(row[colName])
         return dataDict
 
-testData = model_specified(["records lost", "date", "year   "], 1000000)
-for org in testData:
-    print(testData[org])
+def main(): 
+    testData = model_specified(["records lost", "date", "year   "], 1000000)
+    for org in testData:
+        print(testData[org])
+
 
 
                     

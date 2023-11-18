@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="/analyzepass" method="POST">
+            <div>
+                <label for="user_input">Input Your Password!</label>
+                <input type="text" id="user_input" name="user_input">
+            </div>
+            <button type="submit" class="btn" value="submit"> Generate </button>
+        </form>
+        <div>
+            <h2>Your Password Is:</h2>
+            <h3>{{FEEDBACK}}</h3>
+        </div>
+    </body>
+</html>
