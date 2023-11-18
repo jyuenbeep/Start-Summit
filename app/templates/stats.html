@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../static/js/slider.js" defer> </script>
+    </head>
+    <body>
+        <h1>Statistics Table</h1>
+        <div>
+            <form action="/stats_table" method="POST">
+                <label for="recordMin">Minimum # of Records Lost</label><br>
+                <div class="slider-container">
+                    <input type="range" min="100000" max="5000000" value="100000" class="slider" id="recordMin" name="recordMin">
+                    <span id="min_value"></span>
+                </div>
+                <button type="submit" class="btn" value="submit"> Submit Table </button>
+            </form>
+        </div>
+        <div>
+            <table>
+                
+        <tr>
+            <th>Organization</th>
+            <th># of Records Lost</th>
+            <th>Date of Breach</th>
+        </tr>
+    
+        <tr>
+            <td>Plex</td>
+            <td>15,000,000</td>
+            <td>Aug 2022</td>
+        </tr>
+        
+        <tr>
+            <td>Twitter</td>
+            <td>5,400,000</td>
+            <td>Dec 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Shanghai Police</td>
+            <td>500,000,000</td>
+            <td>Jul 2022</td>
+        </tr>
+        
+        <tr>
+            <td>CDEK</td>
+            <td>18,218,203</td>
+            <td>Mar 2022</td>
+        </tr>
+        
+        <tr>
+            <td>FlexBooker</td>
+            <td>3,700,000</td>
+            <td>Jan 2022</td>
+        </tr>
+        
+        <tr>
+            <td>Robinhood</td>
+            <td>5,000,937</td>
+            <td>Nov 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Acer</td>
+            <td>3,000,000</td>
+            <td>Oct 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Experian SA</td>
+            <td>24,000,000</td>
+            <td> Jul 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Twitch</td>
+            <td>10,000,000</td>
+            <td>Oct 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Syniverse</td>
+            <td>500,000,000</td>
+            <td>Sep 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Pandora Papers</td>
+            <td>11,900,000</td>
+            <td>Oct 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Neiman Marcus</td>
+            <td>4,600,000</td>
+            <td>Sep 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Epik</td>
+            <td>15,000,000</td>
+            <td>Sep 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Thailand visitors</td>
+            <td>100,000,000</td>
+            <td>Sep 2021</td>
+        </tr>
+        
+        <tr>
+            <td>T-Mobile </td>
+            <td>76,000,000</td>
+            <td>Aug 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Contact tracing data</td>
+            <td>38,000,000</td>
+            <td>Aug 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Linkedin</td>
+            <td>700,000,000</td>
+            <td>Jul 2021</td>
+        </tr>
+        
+        <tr>
+            <td>VW</td>
+            <td>3,300,000</td>
+            <td>Jun 2021</td>
+        </tr>
+        
+        <tr>
+            <td>MacDonalds</td>
+            <td>10,000,000</td>
+            <td>Jun 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Air India</td>
+            <td>4,500,000</td>
+            <td>May 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Amazon Reviews</td>
+            <td>13,124,962</td>
+            <td>May 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Peloton</td>
+            <td>3,000,000</td>
+            <td>May 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Digital Ocean</td>
+            <td>10,000,000</td>
+            <td>Apr 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Park Mobile</td>
+            <td>21,000,000</td>
+            <td>Apr 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Ubiquiti</td>
+            <td>16,000,000</td>
+            <td>Feb 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Experian Brazil</td>
+            <td>220,000,000</td>
+            <td>Feb 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Gab</td>
+            <td>4,000,000</td>
+            <td> Mar 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Star Alliance</td>
+            <td>16,000,000</td>
+            <td> Mar 2021</td>
+        </tr>
+        
+        <tr>
+            <td>Facebook</td>
+            <td>533,000,000</td>
+            <td> Mar 2021</td>
+        </tr>
+        
+        <tr>
+            <td>SolarWinds</td>
+            <td>50,000,000</td>
+            <td> Dec 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Ho Mobile</td>
+            <td>2,500,000</td>
+            <td> Dec 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Drizly</td>
+            <td>2,400,000</td>
+            <td> Sep 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Zhenhua</td>
+            <td>2,400,000</td>
+            <td> Sep 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Cense AI</td>
+            <td>2,500,000</td>
+            <td> Aug 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Pakistani mobile operators</td>
+            <td>115,000,000</td>
+            <td> Apr 2020</td>
+        </tr>
+        
+        <tr>
+            <td>db8151dd</td>
+            <td>22,000,000</td>
+            <td> May 2020</td>
+        </tr>
+        
+        <tr>
+            <td>EasyJet</td>
+            <td>9,000,000</td>
+            <td> May 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Microsoft</td>
+            <td>250,000,000</td>
+            <td> Jan 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Dutch Government</td>
+            <td>6,900,000</td>
+            <td> Mar 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Marriott Hotels</td>
+            <td>5,200,000</td>
+            <td> Mar 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Israeli government</td>
+            <td>6,500,000</td>
+            <td> Feb 2020</td>
+        </tr>
+        
+        <tr>
+            <td>MGM Hotels</td>
+            <td>10,600,000</td>
+            <td> Feb 2020</td>
+        </tr>
+        
+        <tr>
+            <td>Buchbinder Car Rentals</td>
+            <td>5,000,000</td>
+            <td> Jan 2020</td>
+        </tr>
+        
+                2369096
+            </table>
+        </div>
+    </body>
+</html>
