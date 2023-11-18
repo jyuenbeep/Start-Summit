@@ -177,6 +177,14 @@ def gamepage():
 def page1page():
     return render_template('game/page1.html')
 
+@app.route("/page2a", methods=['GET'])
+def page1page():
+    return render_template('game/page2a.html')
+
+@app.route("/page2b", methods=['GET'])
+def page1page():
+    return render_template('game/page2b.html')
+
 @app.route("/getgame1apage", methods=['GET'])
 def getgame1apage():
     return render_template('game/get_game1a.html')
