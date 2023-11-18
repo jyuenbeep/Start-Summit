@@ -174,20 +174,20 @@ function rest() {
 //results
 function updateResult() {
   if (correctScore >= 7) {
-    result.innerHTML = "You are proficient in basic cybersecurity!!";
+    result.innerHTML = "Congradulations! You are proficient in basic cybersecurity!!";
   }
   else if (wrongScore > 1) {
-    result.innerHTML = "You are lacking in basic cybersecurity knowledge :(";
+    result.innerHTML = ":( You should check our Resources to improve your cybersecurity knowledge";
   }
 }
 
 const btnElList = document.querySelectorAll('button');
 btnElList.forEach(btnEl => {
   btnEl.addEventListener('click', () => {
-    if (btnEl.getElementById("restart")){
-      return
-    } else {
+    // if (btnEl.getElementById('restart')){
+    //   return
+    // } else {
     btnEl.classList.add('special')
-    }
+    // }
   })
 })
