@@ -10,7 +10,7 @@ import random
 
 def model_specified(colArr, recordMin, yearMin):
     dataDict = {}
-    with open('data_breaches.csv') as f:
+    with open('data_breaches.csv', encoding="utf-8") as f:
         r = csv.DictReader(f)
         for row in r:
             if (row["date"]!=''):
