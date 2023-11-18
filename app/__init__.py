@@ -125,9 +125,9 @@ def quizpage():
 def passwordpage():
     return render_template('password.html')
 
-@app.route("/game", methods=['GET'])
-def passwordpage():
-    return render_template('game.html')
+@app.route("/contact", methods=['GET'])
+def contactpage():
+    return render_template('contact.html')
 
 @app.route("/analyzepass", methods=['GET', 'POST'])
 def analyzepasspage():
@@ -167,6 +167,20 @@ def statsTablePage():
         table = makeRecordTable(0, 0)
         writeHTML(html_template.format(DATA_TABLE=table), "table.html")
     return render_template("table.html")
+
+
+@app.route("/game", methods=['GET'])
+def gamepage():
+    return render_template('game.html')
+
+@app.route("/page1", methods=['GET'])
+def page1page():
+    return render_template('game/page1.html')
+
+@app.route("/getgame1apage", methods=['GET'])
+def getgame1apage():
+    return render_template('game/get_game1a.html')
+
     
 # RUN ================================================================================
 
