@@ -36,6 +36,9 @@ html_template = """
                 <li class="nav-item">
                     <a class="nav-link" href="/aboutus">About Us</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/quiz">Quiz</a>
+                </li>
             </ul>
         </div>
         </nav>
@@ -103,6 +106,10 @@ def aboutpage():
 @app.route("/resources", methods=['GET'])
 def resourcespage():
     return render_template('resources.html')
+
+@app.route("/quiz", methods=['GET'])
+def quizpage():
+    return render_template('quiz.html')
 
 @app.route("/analyzepass", methods=['GET', 'POST'])
 def analyzepasspage():
