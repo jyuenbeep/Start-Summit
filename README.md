@@ -1,7 +1,7 @@
 # Cybersecurity: Trends of Vulnerable Data in Big Corporations (By Wegie)
 
 ### <b>PROBLEM STATEMENT:</b>
-Large Companies—such as Meta—need to prioritize ethical methods to gain profit because there is a tremendous lack of security involving sensistive and personal data due to the desire to make a profit
+### Large Companies—such as Meta—need to prioritize ethical methods to gain profit because there is a tremendous lack of security involving sensistive and personal data due to the desire to make a profit
 
 </br>
 
