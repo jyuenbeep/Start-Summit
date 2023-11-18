@@ -1,28 +1,27 @@
 # Cybersecurity: Trends of Vulnerable Data in Big Corporations (By Wegie)
 
 ### <b>PROBLEM STATEMENT:</b>
-> Large Companies—such as Meta—need to prioritize ethical methods to gain profit because there is a tremendous lack of security involving sensistive and personal data due to the desire to make a profit
+### Large Companies—such as Meta—need to prioritize ethical methods to gain profit because there is a tremendous lack of security involving sensistive and personal data due to the desire to make a profit
 
 </br>
 
 **PROBLEM:**
 
-How might we encourage transparency for large corporations so that they would put ethical values over profit?
-</br>
+>How might we encourage transparency for large corporations so that they would put ethical values over profit?
+
 </br>
 
 
 **WHY?:** 
 
-Due to the rise of dependency on technology, big corporations are enticed into relying on unethical methods to gain profit
-</br>
+>Due to the rise of dependency on technology, big corporations are enticed into relying on unethical methods to gain profit
+
 </br>
 
 
 **SOLUTION:** 
 
-Educate users/population on the damade of vulnerable data to pressure big corporations to priporitize values over profit to encourage transparency
-</br>
+>Educate users/population on the damade of vulnerable data to pressure big corporations to priporitize values over profit to encourage transparency
 
 </br>
 

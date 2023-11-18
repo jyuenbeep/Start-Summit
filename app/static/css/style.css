@@ -1,0 +1,91 @@
+html {
+    font-family: "Monaco, monospace";
+}
+
+h1 {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+h2 {
+    font-size: 20px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 25px;
+
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+p {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+
+container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    display: block;
+    width: 8em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+button:hover {
+    background-color: #B9BBB6;
+  }
+
+.btn {
+    font-size: 15px;
+    background-color: white;
+    padding: 8px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+
+img {
+    margin-left: 12.5%;
+    max-width: 50%;
+    background-color: white;
+}
+
+.card {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    display: grid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* margin: 8px; */
+    padding: 10px;
+  }

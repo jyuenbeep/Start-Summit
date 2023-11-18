@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -55,39 +56,101 @@
         </div>
       </div>
         </div>
+=======
+<html>
+  <head>
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body style="background-color:#f0edda">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/"><strong>SECUREHUB</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/stats">STATISTICS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/resources">RESOURCES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/password">PASSWORDS</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/quiz">QUIZ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/game">GAME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/aboutus">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">CONTACT</a>
+        </li>
+      </ul>
+>>>>>>> 10fae3761abe4a928532e1dc5482b9a187802095
     </div>
+    </nav>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div class="d-flex justify-content-center" style="padding-top:30px; padding-bottom:30px;">
+  <div class="text-center w-75 rounded rounded-3" style="background-color: white; padding:20px">
+    <h1 style="letter-spacing: 0.3em; color: navy"> <strong>OUR MISSION:</strong></h1>
+    <p style="font-family:Monaco, monospace; font-size:20px; letter-spacing: 0.005em;"> 
+      <b>
+        We aim to safeguard personal privacy throughout our community 
+      by raising awareness about the risks of big corporations' data collection, 
+      providing resources to mitigate cybersecurity threats, and enhancing education 
+      on data collection risks and breaches through our website.
+      </b>
+    </p>
+  </div>
+</div>
+<div class="text-center" style="padding:30px; font-family:Times New Roman, Serif; letter-spacing: 0.3em;">
+  <h1>
+    <i>
+      <b>"protect, empower, explore"</b>
+    </i>
+  </h1><br>
+</div>
 
-  <!-- <div class="card">       
-            Our mission is to combat the risk of personal privacy being compromised by raising 
-   awareness of the dangers associated with data collection by big corporations. 
-   We aim to provide insight and resources to our community to minimize the consequences of cybersecurity threats. 
-   We strive to better our community through education on the risks associated with data collection practices and 
-   potential data breaches by offering statistics, resources, and interactive features throughout our website.
-          </div> -->
-
-</body>
 
 
 <!-- more stuff -->
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div class="container">
+  <div>
+    <div id="carouselExampleControls" class= "carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="https://www.w3schools.com/images/w3schools_green.jpg" alt="First slide">
+            <img class="d-block w-100 rounded" src= "{{url_for('static', filename='assets/page1.png')}}" width="500" height="600">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="...">
+            <img class="d-block w-100 rounded" src="{{url_for('static', filename='assets/page2.png')}}" width="500" height="600"> 
           </div> 
           <div class="carousel-item">
-            <img class="d-block w-100" src="...">
+            <img class="d-block w-100 rounded" src="{{url_for('static', filename='assets/page3.png')}}" width="500" height="600">
           </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 rounded" src="{{url_for('static', filename='assets/page4.png')}}" width="500" height="600">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 rounded" src="{{url_for('static', filename='assets/page5.png' )}}" width="500" height="600">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 rounded" src="{{url_for('static', filename='assets/page6.png' )}}" width="500" height="600">
+          </div>
+          
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -98,6 +161,60 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+    </div>
+  </div>
+
+  <div class="container" style="padding:20px">
+    <div class="row">
+      <div class="col-md-4 text-center" style="padding:10px">
+        <div style="padding:10px" class="rounded rounded-3 border border-5 border-dark">
+          <h3 style="color: navy"> <strong>PROTECT</strong></h3>
+      <p style="font-family:Arial, Helvetica, sans-serif"> 
+        We want users to feel comfortable and protected knowing that their sensitive data has the lowest chance of being used for bad intentions
+      </p>
+        </div>
+      </div>
+
+     
+
+      <div class="col-md-4 text-center" style="padding:10px">
+        <div style="padding:10px" class="rounded rounded-3 border border-5 border-dark">
+          <h3 style="color: navy"> <strong>EMPOWER</strong></h3>
+      <p style="font-family:Arial, Helvetica, sans-serif"> 
+        Equipping users with the ability to learn on a major and large topic such as cybersecurity as the digital world continues to grow
+      </p><br>
+        </div>
+      </div>
+
+      
+
+      <div class="col-md-4 text-center" style="padding:10px">
+        <div style="padding:10px" class="rounded rounded-3 border border-5 border-dark">
+          <h3 style="color: navy"> <strong>EXPLORE</strong></h3>
+      <p style="font-family:Arial, Helvetica, sans-serif"> 
+        Reshape users' thought process and understanding when they utilize websites that may have malicious intentions.
+      </p><br>
+        </div>
+      </div>
+  </div>
 
     </body>
+
+    <style>
+      .container {
+        max-width: 75%;
+      }
+
+      .card {
+        display: grid;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* margin: 8px; */
+        padding: 10px;
+        height: 600px;
+        max-height: 60%;
+      }
+
+    </style>
+
+
 </html>
