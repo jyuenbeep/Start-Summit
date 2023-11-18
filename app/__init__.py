@@ -69,6 +69,22 @@ def writeHTML(htmlTemplate, file):
 def homepage():
     return render_template('home.html')
 
+@app.route("/aboutus", methods=['GET'])
+def aboutpage():
+    return render_template('aboutus.html')
+
+@app.route("/resources", methods=['GET'])
+def resourcespage():
+    return render_template('resources.html')
+
+@app.route("/analyzepass", methods=['GET'])
+def analyzepasspage():
+    return render_template('analyzepass.html')
+
+@app.route("/genpass", methods=['GET'])
+def genpasspage():
+    return render_template('genpass.html')
+
 @app.route("/stats_table", methods=["GET", "POST"])
 def statspage():
     if (request.method=="POST"):
