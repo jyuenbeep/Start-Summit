@@ -46,13 +46,6 @@ body {
     margin: 5px;
   }
   
-  /* STYLE IMAGES */
-  .answer-choice img {
-    height: 16em;
-    border-radius: 10px;
-    border: 2px solid #12635c;
-  }
-  
   /* STYLE BUTTON */
   button { 
     display: block;
@@ -80,5 +73,9 @@ body {
   }
   
   button:hover {
+    background-color: #82bfba;
+  }
+
+  .special {
     background-color: #82bfba;
   }

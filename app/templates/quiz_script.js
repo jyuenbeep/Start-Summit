@@ -176,3 +176,11 @@ function updateResult() {
     result.innerHTML = "You are lacking in basic cybersecurity knowledge :(";
   }
 }
+
+const btnElList = document.querySelectorAll('button');
+
+btnElList.forEach(btnEl => {
+  btnEl.addEventListener('click', () => {
+    btnEl.classList.add('special')
+  })
+})
