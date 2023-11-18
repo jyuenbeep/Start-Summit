@@ -29,3 +29,24 @@ Everyone ::
 - Asked mentor questions
 - Split into groups and assigned jobs for each pair
 ==============================================================
+
+11/18 12:17am
+--------------------------------------------------------------
+Ivina + Kristen :: Finished programming the interactive password methods
+- Including password generator and password analyzer
+==============================================================
+
+11/18 1:00am
+--------------------------------------------------------------
+Bella :: Worked on Canva slides for carousel
+Laurie + Isabel :: Worked on navigation bar and chose color pallettes
+Carolyn ::
+Added mission stamement/title to home Page
+created container for mission statement and moved title and statement
+added background color to home page
+Serenity + Grace:: Researched on marketing ideas and how we (as a group) 
+will be piecing it together with an open community came up with new 
+features with Ivina and Kristen to create a game on the website
+Jasmine :: Building a stat table with SQL
+Ivina + Kristen :: Starting the quiz game!!
+==============================================================
