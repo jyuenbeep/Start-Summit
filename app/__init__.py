@@ -34,10 +34,10 @@ html_template = """
                     <a class="nav-link" href="/stats">Statistics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/aboutus">About Us</a>
+                    <a class="nav-link" href="/quiz">Quiz</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/quiz">Quiz</a>
+                    <a class="nav-link" href="/aboutus">About Us</a>
                 </li>
             </ul>
         </div>
