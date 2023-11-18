@@ -16,26 +16,48 @@ html_template = """
 <html>
     <head>
         <script src="../static/js/slider.js" defer> </script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <h1>Statistics Table</h1>
         <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Trends of Vulnerable Data in Big Corporations</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/stats">Statistics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About Us</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+        </div>
+        <div>
+            <h1 class="text-center">Statistics Table</h1>
             <form action="/stats" method="POST">
                 <label for="recordMin">Minimum # of Records Lost</label><br>
                 <div class="slider-container">
-                    <input type="range" min="100000" max="5000000" value="100000" class="slider" id="recordMin" name="recordMin">
+                    <input type="range" min="100000" max="5000000" value="100000" class="form-range" id="recordMin" name="recordMin">
                     <span id="recordMin_value"></span>
                 </div>
                 <label for="yearMin">Start Year</label><br>
                 <div class="slider-container">
-                    <input type="range" min="2011" max="2022" value="2011" class="slider" id="yearMin" name="yearMin">
+                    <input type="range" min="2011" max="2022" value="2011" class="form-range" id="yearMin" name="yearMin">
                     <span id="yearMin_value"></span>
                 </div>
                 <button type="submit" class="btn" value="submit"> Submit Table </button>
             </form>
         </div>
         <div>
-            <table>
+            <table class="table table-hover">
                 {DATA_TABLE}
             </table>
         </div>
@@ -46,8 +68,8 @@ html_template = """
 def makeRecordTable(rMin, yMin):
     dataDict = model_specified(["records lost", "date", "sector", "data sensitivity"], rMin, yMin)
     htmlTable = """
-        <tr>
-            <th>Organization</th>
+        <tr class="thead-dark">
+            <th scope="row">Organization</th>
             <th># of Records Lost</th>
             <th>Date of Breach</th>
         </tr>
@@ -56,7 +78,7 @@ def makeRecordTable(rMin, yMin):
         org = dataDict[element]   
         htmlTable+=f"""
         <tr>
-            <td>{element}</td>
+            <th scope="row">{element}</th>
             <td>{org[0]}</td>
             <td>{org[1]}</td>
         </tr>

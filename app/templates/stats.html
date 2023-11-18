@@ -3,385 +3,491 @@
 <html>
     <head>
         <script src="../static/js/slider.js" defer> </script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <h1>Statistics Table</h1>
         <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Trends of Vulnerable Data in Big Corporations</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/stats">Statistics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutus">About Us</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+        </div>
+        <div>
+            <h1 class="text-center">Statistics Table</h1>
             <form action="/stats" method="POST">
                 <label for="recordMin">Minimum # of Records Lost</label><br>
                 <div class="slider-container">
-                    <input type="range" min="100000" max="5000000" value="100000" class="slider" id="recordMin" name="recordMin">
+                    <input type="range" min="100000" max="5000000" value="100000" class="form-range" id="recordMin" name="recordMin">
                     <span id="recordMin_value"></span>
                 </div>
                 <label for="yearMin">Start Year</label><br>
                 <div class="slider-container">
-                    <input type="range" min="2011" max="2022" value="2011" class="slider" id="yearMin" name="yearMin">
+                    <input type="range" min="2011" max="2022" value="2011" class="form-range" id="yearMin" name="yearMin">
                     <span id="yearMin_value"></span>
                 </div>
                 <button type="submit" class="btn" value="submit"> Submit Table </button>
             </form>
         </div>
         <div>
-            <table>
+            <table class="table table-hover">
                 
-        <tr>
-            <th>Organization</th>
+        <tr class="thead-dark">
+            <th scope="row">Organization</th>
             <th># of Records Lost</th>
             <th>Date of Breach</th>
         </tr>
     
         <tr>
-            <td>Plex</td>
+            <th scope="row">Plex</th>
             <td>15,000,000</td>
             <td>Aug 2022</td>
         </tr>
         
         <tr>
-            <td>Twitter</td>
+            <th scope="row">Twitter</th>
             <td>5,400,000</td>
             <td>Dec 2021</td>
         </tr>
         
         <tr>
-            <td>Shanghai Police</td>
+            <th scope="row">Shanghai Police</th>
             <td>500,000,000</td>
             <td>Jul 2022</td>
         </tr>
         
         <tr>
-            <td>CDEK</td>
+            <th scope="row">City of Amagasaki, Japan</th>
+            <td>500,000</td>
+            <td>Jun 2022</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Dubai Real Estate Leak</th>
+            <td>800,000</td>
+            <td>May 2022</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Mailchimp</th>
+            <td>106,586</td>
+            <td>Apr 2022</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">PayHere</th>
+            <td>1,580,249</td>
+            <td>Mar 2022</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">CDEK</th>
             <td>18,218,203</td>
             <td>Mar 2022</td>
         </tr>
         
         <tr>
-            <td>Robinhood</td>
+            <th scope="row">Washington State Dpt of Licensing</th>
+            <td>257,000</td>
+            <td>Feb 2022</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Red Cross</th>
+            <td>500,000</td>
+            <td>Jan 2022</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Open Subtitles</th>
+            <td>100,000</td>
+            <td>Jan 2022</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">FlexBooker</th>
+            <td>3,700,000</td>
+            <td>Jan 2022</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">LINE Pay</th>
+            <td>133,000</td>
+            <td>Dec 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Robinhood</th>
             <td>5,000,937</td>
             <td>Nov 2021</td>
         </tr>
         
         <tr>
-            <td>Experian SA</td>
+            <th scope="row">GoDaddy</th>
+            <td>1,200,000</td>
+            <td>Nov 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Travelio</th>
+            <td>471,376</td>
+            <td>Nov 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Acer</th>
+            <td>3,000,000</td>
+            <td>Oct 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Brewdog</th>
+            <td>200,000</td>
+            <td>Oct 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Nvidia</th>
+            <td>100,000</td>
+            <td>Mar 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Okta</th>
+            <td>100,000</td>
+            <td>Jan 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Experian SA</th>
             <td>24,000,000</td>
             <td> Jul 2020</td>
         </tr>
         
         <tr>
-            <td>Twitch</td>
+            <th scope="row">Royal Enfield</th>
+            <td>420,873</td>
+            <td> Jan 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Twitch</th>
             <td>10,000,000</td>
             <td>Oct 2021</td>
         </tr>
         
         <tr>
-            <td>Syniverse</td>
+            <th scope="row">Syniverse</th>
             <td>500,000,000</td>
             <td>Sep 2021</td>
         </tr>
         
         <tr>
-            <td>Pandora Papers</td>
+            <th scope="row">Pandora Papers</th>
             <td>11,900,000</td>
             <td>Oct 2021</td>
         </tr>
         
         <tr>
-            <td>Epik</td>
+            <th scope="row">Neiman Marcus</th>
+            <td>4,600,000</td>
+            <td>Sep 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Epik</th>
             <td>15,000,000</td>
             <td>Sep 2021</td>
         </tr>
         
         <tr>
-            <td>Thailand visitors</td>
+            <th scope="row">Thailand visitors</th>
             <td>100,000,000</td>
             <td>Sep 2021</td>
         </tr>
         
         <tr>
-            <td>T-Mobile </td>
+            <th scope="row">T-Mobile </th>
             <td>76,000,000</td>
             <td>Aug 2021</td>
         </tr>
         
         <tr>
-            <td>Contact tracing data</td>
+            <th scope="row">Contact tracing data</th>
             <td>38,000,000</td>
             <td>Aug 2021</td>
         </tr>
         
         <tr>
-            <td>Linkedin</td>
+            <th scope="row">Estonian gov</th>
+            <td>280,000</td>
+            <td>Jul 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Guntrader</th>
+            <td>111,000</td>
+            <td>Jul 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Linkedin</th>
             <td>700,000,000</td>
             <td>Jul 2021</td>
         </tr>
         
         <tr>
-            <td>MacDonalds</td>
+            <th scope="row">VW</th>
+            <td>3,300,000</td>
+            <td>Jun 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">MacDonalds</th>
             <td>10,000,000</td>
             <td>Jun 2021</td>
         </tr>
         
         <tr>
-            <td>Amazon Reviews</td>
+            <th scope="row">Air India</th>
+            <td>4,500,000</td>
+            <td>May 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Omiai dating app</th>
+            <td>1,710,000</td>
+            <td>May 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Amazon Reviews</th>
             <td>13,124,962</td>
             <td>May 2021</td>
         </tr>
         
         <tr>
-            <td>Digital Ocean</td>
+            <th scope="row">Peloton</th>
+            <td>3,000,000</td>
+            <td>May 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Digital Ocean</th>
             <td>10,000,000</td>
             <td>Apr 2021</td>
         </tr>
         
         <tr>
-            <td>Park Mobile</td>
+            <th scope="row">Park Mobile</th>
             <td>21,000,000</td>
             <td>Apr 2021</td>
         </tr>
         
         <tr>
-            <td>Ubiquiti</td>
+            <th scope="row">Ubiquiti</th>
             <td>16,000,000</td>
             <td>Feb 2021</td>
         </tr>
         
         <tr>
-            <td>Experian Brazil</td>
+            <th scope="row">Meet Mindful</th>
+            <td>2,240,000</td>
+            <td>Feb 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Experian Brazil</th>
             <td>220,000,000</td>
             <td>Feb 2021</td>
         </tr>
         
         <tr>
-            <td>Star Alliance</td>
+            <th scope="row">Gab</th>
+            <td>4,000,000</td>
+            <td> Mar 2021</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Star Alliance</th>
             <td>16,000,000</td>
             <td> Mar 2021</td>
         </tr>
         
         <tr>
-            <td>Facebook</td>
+            <th scope="row">Facebook</th>
             <td>533,000,000</td>
             <td> Mar 2021</td>
         </tr>
         
         <tr>
-            <td>SolarWinds</td>
+            <th scope="row">Ledger</th>
+            <td>270,000</td>
+            <td> Dec 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">T-mobile</th>
+            <td>200,000</td>
+            <td> Dec 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">The Hospital Group</th>
+            <td>1,000,000</td>
+            <td> Dec 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">SolarWinds</th>
             <td>50,000,000</td>
             <td> Dec 2020</td>
         </tr>
         
         <tr>
-            <td>Pakistani mobile operators</td>
+            <th scope="row">Ho Mobile</th>
+            <td>2,500,000</td>
+            <td> Dec 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Spotify</th>
+            <td>500,000</td>
+            <td> Dec 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Drizly</th>
+            <td>2,400,000</td>
+            <td> Sep 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">GEDmatch</th>
+            <td>1,400,000</td>
+            <td> Sep 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Call of Duty / Activision</th>
+            <td>500,000</td>
+            <td> Sep 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Zhenhua</th>
+            <td>2,400,000</td>
+            <td> Sep 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Cense AI</th>
+            <td>2,500,000</td>
+            <td> Aug 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Nintendo</th>
+            <td>300,000</td>
+            <td> Apr 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Pakistani mobile operators</th>
             <td>115,000,000</td>
             <td> Apr 2020</td>
         </tr>
         
         <tr>
-            <td>db8151dd</td>
+            <th scope="row">US Marshals Service</th>
+            <td>387,000</td>
+            <td> May 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">db8151dd</th>
             <td>22,000,000</td>
             <td> May 2020</td>
         </tr>
         
         <tr>
-            <td>EasyJet</td>
+            <th scope="row">EasyJet</th>
             <td>9,000,000</td>
             <td> May 2020</td>
         </tr>
         
         <tr>
-            <td>Microsoft</td>
+            <th scope="row">Microsoft</th>
             <td>250,000,000</td>
             <td> Jan 2020</td>
         </tr>
         
         <tr>
-            <td>Dutch Government</td>
+            <th scope="row">Dutch Government</th>
             <td>6,900,000</td>
             <td> Mar 2020</td>
         </tr>
         
         <tr>
-            <td>Marriott Hotels</td>
+            <th scope="row">Virgin Media</th>
+            <td>900,000</td>
+            <td> Mar 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Boots Advantage Card</th>
+            <td>150,000</td>
+            <td> Mar 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Tesco Clubcard</th>
+            <td>600,000</td>
+            <td> Mar 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Marriott Hotels</th>
             <td>5,200,000</td>
             <td> Mar 2020</td>
         </tr>
         
         <tr>
-            <td>Israeli government</td>
+            <th scope="row">Zoom</th>
+            <td>500,000</td>
+            <td> Apr 2020</td>
+        </tr>
+        
+        <tr>
+            <th scope="row">Israeli government</th>
             <td>6,500,000</td>
             <td> Feb 2020</td>
         </tr>
         
         <tr>
-            <td>MGM Hotels</td>
+            <th scope="row">MGM Hotels</th>
             <td>10,600,000</td>
             <td> Feb 2020</td>
         </tr>
         
         <tr>
-            <td>Buchbinder Car Rentals</td>
+            <th scope="row">Buchbinder Car Rentals</th>
             <td>5,000,000</td>
             <td> Jan 2020</td>
-        </tr>
-        
-        <tr>
-            <td>Wawa</td>
-            <td>30,000,000</td>
-            <td> Dec 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Quest Diagnostics</td>
-            <td>20,000,000</td>
-            <td> Jun 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Canva</td>
-            <td>139,000,000</td>
-            <td> May 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Chtrbox</td>
-            <td>49,000,000</td>
-            <td> May 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Dubsmash</td>
-            <td>162,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>ShareThis</td>
-            <td>41,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>HauteLook</td>
-            <td>28,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Animoto</td>
-            <td>25,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>EyeEm</td>
-            <td>22,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>8fit</td>
-            <td>20,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Whitepages</td>
-            <td>18,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Fotolog</td>
-            <td>16,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Armor Games</td>
-            <td>11,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>BookMate</td>
-            <td>8,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>CoffeeMeetsBagel</td>
-            <td>6,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Ixigo</td>
-            <td>18,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>YouNow</td>
-            <td>40,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Houzz</td>
-            <td>57,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Stronghold Kingdoms</td>
-            <td>5,000,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>500px</td>
-            <td>14,800,000</td>
-            <td> Feb 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Blank Media Games</td>
-            <td>7,600,000</td>
-            <td> Jan 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Indian citizens</td>
-            <td>275,265,298</td>
-            <td> May 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Bulgarian National Revenue Agency</td>
-            <td>5,000,000</td>
-            <td> Jul 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Capital One</td>
-            <td>100,000,000</td>
-            <td> Jul 2019</td>
-        </tr>
-        
-        <tr>
-            <td>Suprema</td>
-            <td>27,800,000</td>
-            <td> Aug 2019</td>
-        </tr>
-        
-        <tr>
-            <td>BriansClub</td>
-            <td>26,000,000</td>
-            <td> Oct 2019</td>
-        </tr>
-        
-        <tr>
-            <td>OxyData</td>
-            <td>380,000,000</td>
-            <td> Nov 2019</td>
         </tr>
         
             </table>
