@@ -20,7 +20,9 @@ Ivina :: Created devlog
 
 11/17 7:50pm
 --------------------------------------------------------------
-Jasmine :: Researched/found out how to use Flask to run web page
+Jasmine ::
+- Created basic Flask app to serve webpage
+- Added templates and static files to Repo
 
-Everyone :: Finalized problem statement
+Everyone :: Finalized problem statement, mentor questions
 ==============================================================
