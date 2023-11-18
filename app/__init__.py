@@ -104,7 +104,7 @@ def genpasspage():
 def statspage():
     if (request.method=="POST"):
         recordMin = int(request.form.get("recordMin"))
-        yearMin = recordMin = int(request.form.get("yearMin"))
+        yearMin = int(request.form.get("yearMin"))
         table = makeRecordTable(recordMin, yearMin)
         writeHTML(html_template.format(DATA_TABLE=table), "stats.html")
     else:
