@@ -48,7 +48,7 @@ STRONG = "Strong password. Cannot be cracked for 100+ years!!"
 
 # passwords do not have spaces
 def analyze_password(s):
-    lowercased = s.lower
+    lowercased = s.lower()
     temp_list = list(lowercased)
     pw_length = len(lowercased)
     
@@ -80,7 +80,7 @@ def analyze_password(s):
         elif pw_length <= 10:
             return WEAK4
         elif pw_length <= 11:
-            return WEAK5
+            return MEDIUM0
         elif pw_length <= 12:
             return MEDIUM1
         elif pw_length <=20:
