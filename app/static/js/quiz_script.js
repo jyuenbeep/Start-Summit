@@ -27,22 +27,22 @@ var restart = document.getElementById("restart");
 
 //event listeners
 q1a1.addEventListener("click", correct);
-q2a1.addEventListener("click", correct);
+q2a2.addEventListener("click", correct);
 q3a1.addEventListener("click", correct);
 q4a1.addEventListener("click", correct);
 q5a1.addEventListener("click", correct);
-q6a1.addEventListener("click", correct);
+q6a2.addEventListener("click", correct);
 q7a1.addEventListener("click", correct);
-q8a1.addEventListener("click", correct);
+q8a2.addEventListener("click", correct);
 
 q1a2.addEventListener("click", wrong);
-q2a2.addEventListener("click", wrong);
+q2a1.addEventListener("click", wrong);
 q3a2.addEventListener("click", wrong);
 q4a2.addEventListener("click", wrong);
 q5a2.addEventListener("click", wrong);
-q6a2.addEventListener("click", wrong);
+q6a1.addEventListener("click", wrong);
 q7a2.addEventListener("click", wrong);
-q8a2.addEventListener("click", wrong);
+q8a1.addEventListener("click", wrong);
 
 restart.addEventListener("click", rest);
 
@@ -93,7 +93,7 @@ function wrong() {
 
 //restart
 function rest() {
-  result.innerHTML = "You are ...";
+  result.innerHTML = "YOUR RESULT IS...";
   questionCount = 0;
   correctScore = 0;
   wrongScore = 0;
@@ -103,8 +103,6 @@ function rest() {
   btnElList.forEach(btnEl => {
       btnEl.classList.remove('special')
   })
-
-
 }
 
   function disablebuttons1() {
@@ -184,9 +182,12 @@ function updateResult() {
 }
 
 const btnElList = document.querySelectorAll('button');
-
 btnElList.forEach(btnEl => {
   btnEl.addEventListener('click', () => {
+    if (btnEl.getElementById("restart")){
+      return
+    } else {
     btnEl.classList.add('special')
+    }
   })
 })
