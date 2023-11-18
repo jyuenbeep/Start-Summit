@@ -18,11 +18,14 @@ Engineer: Jasmine, Laurie, Kristen, Ivina, Grace
 Ivina :: Created devlog 
 ==============================================================
 
-11/17 7:50pm
+11/17 8:37pm
 --------------------------------------------------------------
 Jasmine ::
 - Created basic Flask app to serve webpage
 - Added templates and static files to Repo
 
-Everyone :: Finalized problem statement, mentor questions
+Everyone :: 
+- Finalized problem statement
+- Asked mentor questions
+- Split into groups and assigned jobs for each pair
 ==============================================================

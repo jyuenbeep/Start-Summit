@@ -1,4 +1,6 @@
-# TOPIC QUESTION
+# Cybersecurity: Trends of Vulnerable Data in Big Corporations
+
+### Problem Statement:
 
 ### Team Wegie
 
@@ -29,6 +31,8 @@ yadada
 **Windows**
 
 - Download Python from the [official Python website](https://www.python.org/downloads/)
+
+- Make sure to add the checkbox that says `Add Python to environment variables`
 
 **macOS**
 
