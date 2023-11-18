@@ -44,25 +44,26 @@
     </ul>
   </div>
   </nav>
-  
 
 <div class="container">
   <div class="text-center">
     <div class="row">
-      <div class="row-3"> 
-        <h1> <p style="font-family:Helvetica"> <p style="font-size: 25px;"> <strong>OUR GOAL:</strong></p></h1>
+      <!-- <div class="row-3">  -->
+        <h1> <p style="font-family:Helvetica"> <p style="font-size: 25px; margin-left: 15px; margin-top: 20px;"> <strong>OUR GOAL:</strong></p></h1>
       </p></div>
-      <div class="card bg-light text-dark">
+      <div class="card bg-light text-dark" style="height: 20%">
         <div class="border border-8 p-5">
         <div class="card-body"> 
         <p style="font-family:Helvetica"> 
-      Our mission is to combat the risk of personal privacy being compromised by raising 
-      awareness of the dangers associated with data collection by big corporations. 
-      We aim to provide insight and resources to our community to minimize the consequences of cybersecurity threats. 
-      We strive to better our community through education on the risks associated with data collection practices and 
-      potential data breaches by offering statistics, resources, and interactive features throughout our website.
+          We aim to safeguard personal privacy throughout our community by raising awareness about the risks of big corporations' data collection, providing resources to mitigate cybersecurity threats, and enhancing education on data collection risks and breaches through our website.
+
+
+
+
+
+
     </p>
-  </div>
+  <!-- </div> -->
     </div>
   </div>
 </div>
@@ -81,22 +82,22 @@
     <div id="carouselExampleControls" class= "carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src= "static/assets/first.png" width="500" height="600">
+            <img class="d-block w-100" src= "{{url_for('static', filename='assets/page1.png')}}" width="500" height="600">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="app/static/"> 
+            <img class="d-block w-100" src="{{url_for('static', filename='assets/page2.png')}}" width="500" height="600"> 
           </div> 
           <div class="carousel-item">
-            <img class="d-block w-100" src="app/static/assets/three.jpg">
+            <img class="d-block w-100" src="{{url_for('static', filename='assets/page3.png')}}" width="500" height="600">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="app/static/assets/four_page-0001.jpg">
+            <img class="d-block w-100" src="{{url_for('static', filename='assets/page4.png')}}" width="500" height="600">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="app/static/assets/five.jpg">
+            <img class="d-block w-100" src="{{url_for('static', filename='assets/page5.png' )}}" width="500" height="600">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="assets/five.jpg">
+            <img class="d-block w-100" src="{{url_for('static', filename='assets/page6.png' )}}" width="500" height="600">
           </div>
           
         </div>
@@ -113,4 +114,22 @@
   </div>
 
     </body>
+
+    <style>
+      .container {
+        max-width: 75%;
+      }
+
+      .card {
+        display: grid;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* margin: 8px; */
+        padding: 10px;
+        height: 600px;
+        max-height: 60%;
+      }
+
+    </style>
+
+
 </html>
