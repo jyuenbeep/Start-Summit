@@ -178,17 +178,40 @@ def page1page():
     return render_template('game/page1.html')
 
 @app.route("/page2a", methods=['GET'])
-def page1page():
+def page2apage():
     return render_template('game/page2a.html')
 
 @app.route("/page2b", methods=['GET'])
-def page1page():
+def page2bpage():
     return render_template('game/page2b.html')
 
-@app.route("/getgame1apage", methods=['GET'])
+@app.route("/getgame1a", methods=['GET'])
 def getgame1apage():
     return render_template('game/get_game1a.html')
 
+@app.route("/getgame1b", methods=['GET'])
+def getgame1bpage():
+    return render_template('game/get_game1b.html')
+
+@app.route("/getgame2a", methods=['GET'])
+def getgame2apage():
+    return render_template('game/get_game2a.html')
+
+@app.route("/pageshutdown", methods=['GET'])
+def pageshutdownpage():
+    return render_template('game/page_shutdown.html')
+
+@app.route("/popup1a", methods=['GET'])
+def popup1apage():
+    return render_template('game/popup1a.html')
+
+@app.route("/popup1b", methods=['GET'])
+def popup1bpage():
+    return render_template('game/popup1b.html')
+
+@app.route("/popup2a", methods=['GET'])
+def popup2apage():
+    return render_template('game/popup2a.html')
     
 # RUN ================================================================================
 

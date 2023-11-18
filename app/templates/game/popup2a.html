@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang = "en">
 <head>
     <title>Cyber Game</title>
+    <meta charset="UTF-8">
+    <body style="background-color:#f0edda">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/game_style.css') }}">
+
 </head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><strong>SECUREHUB</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/stats">STATISTICS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/resources">RESOURCES</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/password">PASSWORDS</a>
+    </li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/quiz">QUIZ</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/game">GAME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/aboutus">ABOUT US</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contact">CONTACT</a>
+    </li>
+  </ul>
+</div>
+</nav>
+
 <body>
     <h1>Stolen Data</h1>
     <p>You clicked submit, and unfortunately you have given your personal data to some scammers.</p>
     <img src = "https://static.vecteezy.com/system/resources/previews/014/034/340/original/credit-card-scammer-3d-character-illustration-png.png" alt="scammer">
-    <a href = "../game.html"><button>Try again</button></a>
+    <a href = "/game" class="btn d-flex justify-content-center"><button>Try again</button></a>
 </body>
 </html>
