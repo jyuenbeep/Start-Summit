@@ -8,7 +8,7 @@ import random
 # sector_list = get_column("sector")
 # sens_list = get_column("data sensitivity")
 
-def model_specified(colArr, recordMin):
+def model_specified(colArr, recordMin, yearMin):
     dataDict = {}
     with open('data_breaches.csv') as f:
         r = csv.DictReader(f)
@@ -17,7 +17,7 @@ def model_specified(colArr, recordMin):
                 recordNum = int(row["records lost"].replace(",",""))
                 yearNum = int(row["year   "])
                 # only adding values with these conditions
-                if (yearNum>=2020 and recordNum>=recordMin):
+                if (yearNum>=yearMin and recordNum>=recordMin):
                     # setting empty array of row elements so we can add specific cols
                     rowElements = []
                     orgName = row["organisation"]

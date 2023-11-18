@@ -1,6 +1,13 @@
-var min_slider = document.getElementById("recordMin");
-var min_output = document.getElementById("min_value");
+var rMin_slider = document.getElementById("recordMin");
+var rMin_output = document.getElementById("recordMin_value");
 
-min_slider.oninput = function() {
-    min_output.innerHTML = this.value;
+rMin_slider.oninput = function() {
+    rMin_output.innerHTML = this.value;
+}
+
+var yMin_slider = document.getElementById("yearMin");
+var yMin_output = document.getElementById("yearMin_value");
+
+yMin_slider.oninput = function() {
+    yMin_output.innerHTML = this.value;
 }

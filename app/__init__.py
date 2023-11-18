@@ -24,7 +24,12 @@ html_template = """
                 <label for="recordMin">Minimum # of Records Lost</label><br>
                 <div class="slider-container">
                     <input type="range" min="100000" max="5000000" value="100000" class="slider" id="recordMin" name="recordMin">
-                    <span id="min_value"></span>
+                    <span id="recordMin_value"></span>
+                </div>
+                <label for="yearMin">Start Year</label><br>
+                <div class="slider-container">
+                    <input type="range" min="2011" max="2022" value="2011" class="slider" id="yearMin" name="yearMin">
+                    <span id="yearMin_value"></span>
                 </div>
                 <button type="submit" class="btn" value="submit"> Submit Table </button>
             </form>
@@ -32,15 +37,14 @@ html_template = """
         <div>
             <table>
                 {DATA_TABLE}
-                {MIN_VALUE}
             </table>
         </div>
     </body>
 </html>
 """
 
-def makeRecordTable(min):
-    dataDict = model_specified(["records lost", "date"], min)
+def makeRecordTable(rMin, yMin):
+    dataDict = model_specified(["records lost", "date", "sector", "data sensitivity"], rMin, yMin)
     htmlTable = """
         <tr>
             <th>Organization</th>
@@ -100,11 +104,12 @@ def genpasspage():
 def statspage():
     if (request.method=="POST"):
         recordMin = int(request.form.get("recordMin"))
-        table = makeRecordTable(recordMin)
-        writeHTML(html_template.format(DATA_TABLE=table, MIN_VALUE=recordMin), "stats.html")
+        yearMin = recordMin = int(request.form.get("yearMin"))
+        table = makeRecordTable(recordMin, yearMin)
+        writeHTML(html_template.format(DATA_TABLE=table), "stats.html")
     else:
-        table = makeRecordTable(0)
-        writeHTML(html_template.format(DATA_TABLE=table, MIN_VALUE=0), "stats.html")
+        table = makeRecordTable(0, 0)
+        writeHTML(html_template.format(DATA_TABLE=table), "stats.html")
     return render_template("stats.html")
     
 # RUN ================================================================================
