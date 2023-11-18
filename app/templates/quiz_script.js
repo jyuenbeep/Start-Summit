@@ -99,6 +99,12 @@ function rest() {
   wrongScore = 0;
   enablebuttons();
   // console.log("hihih")
+  
+  btnElList.forEach(btnEl => {
+      btnEl.classList.remove('special')
+  })
+
+
 }
 
   function disablebuttons1() {
