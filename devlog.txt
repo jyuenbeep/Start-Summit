@@ -1,0 +1,19 @@
+Team Wegie
+
+Roles
+Team lead: Jasmine, Seren
+Developer: Jasmine, Bella, Carolyn, Laurie, Kristen, Ivina, Isabel
+Business Strategist: Seren, Grace, Isabel
+Data Analysts: Bella, Carolyn,
+Engineer: Jasmine, Laurie, Kristen, Ivina, Grace
+---------------------
+
+<time>
+--------------------------------------------------------------
+<name> :: <what ever u did> 
+==============================================================
+
+11/17 6:23pm
+--------------------------------------------------------------
+Ivina :: Created devlog 
+==============================================================
