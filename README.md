@@ -1,6 +1,6 @@
-# Team Wegie
+# TOPIC QUESTION
 
-### **Topic: [insert question]**
+### Team Wegie
 
 ### Roles
 
@@ -13,6 +13,12 @@
 `Data Analysts:` Bella, Carolyn,
 
 `Engineer:` Jasmine, Laurie, Kristen, Ivina, Grace
+
+</br>
+
+### Description
+
+yadada
 
 </br>
 

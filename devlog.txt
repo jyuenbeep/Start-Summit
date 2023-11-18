@@ -17,3 +17,10 @@ Engineer: Jasmine, Laurie, Kristen, Ivina, Grace
 --------------------------------------------------------------
 Ivina :: Created devlog 
 ==============================================================
+
+11/17 7:50pm
+--------------------------------------------------------------
+Jasmine :: Researched/found out how to use Flask to run web page
+
+Everyone :: Finalized problem statement
+==============================================================
