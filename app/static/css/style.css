@@ -1,0 +1,50 @@
+html {
+    font-family: "Helvetica";
+}
+
+h1 {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 25px;
+    margin-top: 20px;
+
+    
+}
+
+h2 {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+h3 {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+p {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+
+container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+button {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}

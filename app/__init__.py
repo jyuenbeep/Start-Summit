@@ -111,6 +111,10 @@ def resourcespage():
 def quizpage():
     return render_template('quiz.html')
 
+@app.route("/password", methods=['GET'])
+def passwordpage():
+    return render_template('password.html')
+
 @app.route("/analyzepass", methods=['GET', 'POST'])
 def analyzepasspage():
     feedback = ""
@@ -118,7 +122,7 @@ def analyzepasspage():
         uInput = request.form.get("user_input")
         if (uInput!=""):
             feedback = analyze_password(uInput)
-    return render_template('analyzepass.html', FEEDBACK=feedback)
+    return render_template('password.html', FEEDBACK=feedback)
 
 @app.route("/genpass", methods=['GET', 'POST'])
 def genpasspage():
@@ -127,7 +131,7 @@ def genpasspage():
         uInput = request.form.get("user_input")
         if (uInput!=""):
             passGen = create_password(uInput)
-    return render_template('genpass.html', NEW_PASS=passGen)
+    return render_template('password.html', NEW_PASS=passGen)
 
 @app.route("/stats", methods=["GET", "POST"])
 def statspage():
