@@ -9,8 +9,14 @@ app.secret_key = "23bd2dcea35c795e204d397157f3d55bf1afda7db6519a46f9d1e5a5f02ed4
 
 # FLASK APP ROUTING ==================================================================
 
-@app.route("/", methods=['POST'])
+@app.route("/", methods=['GET'])
 def homepage():
     return render_template('home.html')
+
+# RUN ================================================================================
+
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
 
 
