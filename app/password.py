@@ -85,7 +85,21 @@ def analyze_password(s):
             return MEDIUM1
         elif pw_length <=20:
             return STRONG
-
+    elif any(character in temp_list for character in LETTERS+NUMBERS):
+        if pw_length <= 6:
+            return WEAK0
+        elif pw_length <= 7:
+            return WEAK1
+        elif pw_length <= 8:
+            return WEAK2
+        elif pw_length <= 9:
+            return WEAK3
+        elif pw_length <= 10:
+            return WEAK4
+        elif pw_length <= 11:
+            return MEDIUM1
+        else:
+             return STRONG
     # checks if password contains any special characters
     elif any(character in temp_list for character in SYMBOLS):
         if pw_length <= 5:
