@@ -29,3 +29,9 @@ Everyone ::
 - Asked mentor questions
 - Split into groups and assigned jobs for each pair
 ==============================================================
+
+11/18 12:17am
+--------------------------------------------------------------
+Ivina + Kristen :: Finished programming the interactive password methods
+- Including password generator and password analyzer
+==============================================================
