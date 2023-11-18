@@ -3,8 +3,19 @@ from flask import render_template
 from flask import request
 from flask import session
 import sqlite3
-from db import model_specified
+from db import model_specified, createArray
 from password import create_password, analyze_password
+from figure import plot
+
+import io
+from flask import Response
+# from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+# from matplotlib.figure import Figure
+# import numpy as np
+# import matplotlib.pyplot as plt
+import matplotlib
+
+matplotlib.pyplot.switch_backend('Agg')
 
 app = Flask(__name__)
 app.secret_key = "23bd2dcea35c795e204d397157f3d55bf1afda7db6519a46f9d1e5a5f02ed45b"
@@ -44,6 +55,7 @@ html_template = """
         </nav>
         </div>
         <div>
+            <image src="static/my_plot.png" width="500" height="600"></image>
             <h1 class="text-center">Statistics Table</h1>
             <form action="/stats" method="POST">
                 <label for="recordMin">Minimum # of Records Lost</label><br>
@@ -138,6 +150,11 @@ def statspage():
     if (request.method=="POST"):
         recordMin = int(request.form.get("recordMin"))
         yearMin = int(request.form.get("yearMin"))
+        # matplotlib
+        dataDict = model_specified(["records lost", "year   "], recordMin, yearMin)
+        arr = createArray(dataDict)
+        plot(arr, len(arr[0]))
+        # making table and overwriting into HTML
         table = makeRecordTable(recordMin, yearMin)
         writeHTML(html_template.format(DATA_TABLE=table), "stats.html")
     else:
