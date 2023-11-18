@@ -46,7 +46,7 @@
       <div class="row-3"> 
         <h1><p style="font-family:Helvetica"> <p style="font-size: 25px; margin-left: 8px; margin-top: 20px;"><strong>ABOUT US</strong></p></p></h1>
       </p></div>
-      <div class="card bg-light text-dark" style="height: 223px">
+      <div class="card bg-light text-dark" style="height: 20%">
         <div class="border border-8 p-5">
         <div class="card-body"> 
         <p style="font-family:Helvetica">We are Team Wegie and we are trying to raise awareness about the dangers of giving away our data  
@@ -74,7 +74,7 @@
   
     <div class="column">
       <div class="card">
-        <img src="/w3images/team2.jpg" alt="Carolyn">
+        <img src="{{url_for('static', filename='assets/carolyn.jpg')}}" alt="Carolyn">
         <div class="container">
           <h2>Carolyn Hoa</h2>
           <p class="title">Developer & Data Analyst</p>
@@ -99,7 +99,7 @@
 
   <div class="column">
     <div class="card">
-      <img src="/w3images/team3.jpg" alt="Isabel">
+      <img src="{{url_for('static', filename='assets/isabel.jpg')}}" alt="Isabel">
       <div class="container">
         <h2>Isabel Yeow</h2>
         <p class="title">Developer & Business Strategist</p>
@@ -218,6 +218,7 @@ img {
   margin: 8px;
   padding: 10px;
   height: 600px;
+  max-height: 60%;
 }
 
 
