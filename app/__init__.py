@@ -125,6 +125,10 @@ def quizpage():
 def passwordpage():
     return render_template('password.html')
 
+@app.route("/game", methods=['GET'])
+def passwordpage():
+    return render_template('game.html')
+
 @app.route("/analyzepass", methods=['GET', 'POST'])
 def analyzepasspage():
     feedback = ""
