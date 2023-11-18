@@ -30,12 +30,14 @@ def model_specified(colArr, recordMin, yearMin):
         return dataDict
 
 def createArray(dataDict):
+    orgArr = []
     yearArr = []
     recordArr = []
     for row in dataDict:
         yearArr.append(int(dataDict[row][1]))
         recordArr.append(int(dataDict[row][0].replace(",","")))
-    return [recordArr, yearArr]
+        orgArr.append(row)
+    return [recordArr, yearArr, orgArr]
 
 def main(): 
     testData = model_specified(["records lost", "date", "year   "], 1000000)

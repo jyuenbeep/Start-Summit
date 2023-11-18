@@ -55,7 +55,7 @@ html_template = """
         </nav>
         </div>
         <div>
-            <image src="static/my_plot.png" width="500" height="600"></image>
+            <image src="static/my_plot.png" class="img-fluid"></image>
             <h1 class="text-center">Statistics Table</h1>
             <form action="/stats" method="POST">
                 <label for="recordMin">Minimum # of Records Lost</label><br>
