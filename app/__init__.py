@@ -20,7 +20,7 @@ html_template = """
     <body>
         <h1>Statistics Table</h1>
         <div>
-            <form action="/stats_table" method="POST">
+            <form action="/stats" method="POST">
                 <label for="recordMin">Minimum # of Records Lost</label><br>
                 <div class="slider-container">
                     <input type="range" min="100000" max="5000000" value="100000" class="slider" id="recordMin" name="recordMin">
@@ -96,7 +96,7 @@ def genpasspage():
             passGen = create_password(uInput)
     return render_template('genpass.html', NEW_PASS=passGen)
 
-@app.route("/stats_table", methods=["GET", "POST"])
+@app.route("/stats", methods=["GET", "POST"])
 def statspage():
     if (request.method=="POST"):
         recordMin = int(request.form.get("recordMin"))
