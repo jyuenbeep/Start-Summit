@@ -43,12 +43,13 @@ $ brew install python
 
 </br>
 
-### 2. Installing Flask
+### 2. Installing Flask/Matplotlib
 
 - Run the command:
 
 ```
 $ pip install Flask
+$ pip install matplotlb
 ```
 
 </br>
