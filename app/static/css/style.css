@@ -89,3 +89,23 @@ img {
     /* margin: 8px; */
     padding: 10px;
   }
+
+  .input-field {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 55px;
+    background: transparent;
+    padding: 0 7px 0 43px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.form-btn {
+    width:100%;
+    border-radius: 25px;
+    color: white;
+}
