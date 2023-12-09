@@ -5,6 +5,7 @@ function myFunction() {
     /* Create a temporary textarea to copy the text */
     var tempTextarea = document.createElement("textarea");
     tempTextarea.value = copyText.innerText;
+    document.body.appendChild(tempTextarea);
 
     /* Select the text inside the temporary textarea */
     tempTextarea.select();
@@ -12,6 +13,7 @@ function myFunction() {
 
     /* Copy the text inside the temporary textarea to the clipboard */
     document.execCommand("copy");
+    document.body.removeChild(tempTextarea);
   }
 
   document.addEventListener("DOMContentLoaded", function(event) { 

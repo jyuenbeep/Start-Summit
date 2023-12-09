@@ -116,10 +116,23 @@ def writeHTML(htmlTemplate, file):
         f.write(htmlTemplate)
     f.close()
 
+questionBank = [
+    "Do you use a password manager? (ex. BitLocker)",
+    "Do you turn on multifactor authentication (2FA)?",
+    "Do you use a VPN when roaming the internet?",
+    "Do you keep your software up to date?",
+    "Which of the following is more secure?",
+    "Do you check links before clicking on them?",
+    "Do you use the same password over and over again?"
+]
+
 # FLASK APP ROUTING ==================================================================
 
-@app.route("/", methods=['GET'])
+@app.route("/", methods=['GET', 'POST'])
 def homepage():
+    # if (request.method=='POST'):
+    #     if (request.form['question_submit']=="q1"):
+    #         render_template('home.html', QUESTION=questionBank[0])
     return render_template('home.html')
 
 @app.route("/aboutus", methods=['GET'])

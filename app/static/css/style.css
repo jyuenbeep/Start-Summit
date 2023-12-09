@@ -113,3 +113,16 @@ img {
 .card-style {
     border-radius: 25px;
 }
+
+.right-card {
+    border-radius: 25px;
+    width:20%;
+}
+
+#overlay {
+    display: none;
+}
+ 
+#popup {
+    display: none;
+}
