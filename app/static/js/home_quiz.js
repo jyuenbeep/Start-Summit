@@ -12,32 +12,28 @@ closePopup.onclick = function() {
 // Show Overlay and Popup
 
 const questionBank = [
-    "Do you use a password manager? (ex. BitLocker)",
-    "Do you turn on multifactor authentication (2FA)?",
-    "Do you use a VPN when roaming the internet?",
-    "Do you keep your software up to date?",
-    "Which of the following is more secure?",
-    "Do you check links before clicking on them?",
-    "Do you use the same password over and over again?"
+    "I use a password manager to create and store my passwords (ex. BitLocker, BitWarden, etc.)", //1 yes
+    "I use the same password over and over again", //2 no
+    "I turn on multifactor authentication (2FA) when given the option", //3 yes
+    "I use a VPN when roaming the internet", //4 yes
+    "I always update my software to keep it up to date", //5 yes
+    "I prioritize using websites with the scheme https instead of http", //6 yes
+    "I always click \"Accept All Cookies\" on a website when prompted", //7 no
+    "I always check the link address before clicking on them", //8 yes
 ]
 
-const correctBank = ["a1", "a1", "a1", "a1", "a2", "a1", "a2"]
-const wrongBank = ["a2", "a2", "a2", "a2", "a1", "a2", "a1"]
+const correctBank = ["a1", "a2", "a1", "a1", "a1", "a1", "a2", "a1"]
+const wrongBank = ["a2", "a1", "a2", "a2", "a2", "a2", "a1", "a2"]
 
 const topicBank = [
-    // 1
-    "Creating a strengthened password",
-    // 2
-    "Using password manager & 2FA(multi-factor authentication)",
-    // 3
-    "Phishing",
-    // 4
-    "Internet Protocol",
-    // 5
-    "Implementing applications or software",
-    // 6
-    "Dangers of accepting cookies",
-    // 7
+    "Using password manager", //1
+    "Creating a strengthened password", //2
+    "Using 2FA(multi-factor authentication)", //3
+    "Using a VPN", //4
+    "Implementing applications or software", //5
+    "Internet Protocol", //6
+    "Dangers of accepting cookies", //7
+    "Phishing", //8
 ]
 
 const infoBank = [
@@ -50,17 +46,20 @@ const infoBank = [
     `Utilizing PIN numbers, authentication application or confirmation 
     text on your phone, or fingerprint or face ID to prevent hackers from being`,
     // 3
-    "With phising being the #1 crime type globally, it's important to read your links carefully!",
+    "[info for 2FA]",
     // 4
-    "Check your internet protocol for better cybersecurity; the \"s\" in the link indicates encryption, preventing hackers from stealing cookies and personal data. Use \"HTTPS\" for secure information sharing.",
+    "Enhance cybersecurity by installing trusted software like antivirus protection softwarres like NordVPN to protect against scammers.",
     // 5
     "Enhance cybersecurity by installing trusted software like antivirus protection softwarres like NordVPN to protect against scammers.",
     // 6
-    "Cookies are small amounts of data that are used to identify your computer and personal info to make the user experience more personalized. The data in cookies are usually harmless but may jeapordise your privacy if they fall into the wrong hands.",
+    "Check your internet protocol for better cybersecurity; the \"s\" in the link indicates encryption, preventing hackers from stealing cookies and personal data. Use \"HTTPS\" for secure information sharing.",
     // 7
+    "Cookies are small amounts of data that are used to identify your computer and personal info to make the user experience more personalized. The data in cookies are usually harmless but may jeapordise your privacy if they fall into the wrong hands.",
+    // 8
+    "With phising being the #1 crime type globally, it's important to read your links carefully!",
 ]
 
-answerClicked = [false, false, false, false, false, false]
+answerClicked = [false, false, false, false, false, false, false, false]
 
 function displayQuestion(qNum) {
     overlay.style.display = 'block';
@@ -97,9 +96,3 @@ function displayQuestion(qNum) {
         changeCard()
     }
 }
-
-
-
-
-
-

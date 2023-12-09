@@ -20,16 +20,19 @@ matplotlib.pyplot.switch_backend('Agg')
 app = Flask(__name__)
 app.secret_key = "23bd2dcea35c795e204d397157f3d55bf1afda7db6519a46f9d1e5a5f02ed45b"
 
+
 # MAKING TABLES ======================================================================
 
 html_template = """
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
         <script src="../static/js/slider.js" defer> </script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     </head>
-    <body style="background-color:#f0edda">
+    <body style="background-color:#f4f1de">
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="/"><strong>SECUREHUB</strong></a>
@@ -83,32 +86,48 @@ html_template = """
             </form>
         </div>
         <div>
-            <table class="table table-hover">
-                {DATA_TABLE}
-            </table>
+            <div class="d-flex justify-content-center">
+                <div class="card table-wrapper-scroll-y my-custom-scrollbar rounded-1" style="width:50%">
+                    <table class="table table-bordered table-hover rounded-10">
+                        {DATA_TABLE}
+                    </table>
+                </div>
+            </div>
         </div>
     </body>
 </html>
 """
-
 def makeRecordTable(rMin, yMin):
     dataDict = model_specified(["records lost", "date", "sector", "data sensitivity"], rMin, yMin)
     htmlTable = """
-        <tr class="thead-dark">
-            <th scope="row">Organization</th>
-            <th># of Records Lost</th>
-            <th>Date of Breach</th>
+    <thead class="custom-header sticky-top">
+        <tr>
+            <th scope="col" class="text-white">Organization</th>
+            <th scope="col" class="text-white"># of Records Lost</th>
+            <th scope="col" class="text-white">Date of Breach</th>
         </tr>
+            </thead>
+                    <tbody>
     """
     for element in dataDict:
-        org = dataDict[element]   
-        htmlTable+=f"""
-        <tr>
-            <th scope="row">{element}</th>
-            <td>{org[0]}</td>
-            <td>{org[1]}</td>
-        </tr>
+        org = dataDict[element]
+        htmlTable += f"""
+            <tr class="table-light">
+                <th scope="row">{element}</th>
+                <td>{org[0]}</td>
+                <td>{org[1]}</td>
+            </tr>
         """
+      
+    htmlTable += """
+        </tbody>
+        <style>
+            .custom-header {
+                background-color: #3D405B;
+            }
+        </style>
+        
+    """
     return htmlTable
 
 def writeHTML(htmlTemplate, file):
@@ -116,23 +135,11 @@ def writeHTML(htmlTemplate, file):
         f.write(htmlTemplate)
     f.close()
 
-questionBank = [
-    "Do you use a password manager? (ex. BitLocker)",
-    "Do you turn on multifactor authentication (2FA)?",
-    "Do you use a VPN when roaming the internet?",
-    "Do you keep your software up to date?",
-    "Which of the following is more secure?",
-    "Do you check links before clicking on them?",
-    "Do you use the same password over and over again?"
-]
 
 # FLASK APP ROUTING ==================================================================
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/", methods=['GET'])
 def homepage():
-    # if (request.method=='POST'):
-    #     if (request.form['question_submit']=="q1"):
-    #         render_template('home.html', QUESTION=questionBank[0])
     return render_template('home.html')
 
 @app.route("/aboutus", methods=['GET'])

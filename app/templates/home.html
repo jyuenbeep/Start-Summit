@@ -6,57 +6,58 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="static/css/style.css">
     <!-- stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_style.css') }}"> -->
-  
+
     <!-- javascript -->
-    <script src="{{ url_for('static', filename='js/quiz_script.js') }}" defer></script>
+    <!-- <script src="{{ url_for('static', filename='js/quiz_script.js') }}" defer></script> -->
     <script src="{{ url_for('static', filename='js/home_quiz.js') }}" defer></script>
 
   </head>
   
   <body style = "background-color:#f0edda">
-  <div class="d-flex flex-row justify-content-between">
-    <div>
-      <nav class="nav-tab navbar-light bg-light d-flex flex-column" style="width: 250px; height: 100vh; float: left">
-        <a class="navbar-brand" style="margin-left: 10%; margin-top: 30px; font-size: 25px"><strong>SECUREHUB</strong></a>
-        <ul class="navbar-nav" style="margin: 20px">
-          <li class="nav-item"><a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="/stats">STATISTICS</a></li>
-          <li class="nav-item"><a class="nav-link" href="/resources">RESOURCES</a></li>
-          <li class="nav-item"><a class="nav-link" href="/password">PASSWORDS</a></li>
-          <li class="nav-item"><a class="nav-link" href="/quiz">QUIZ</a></li>
-          <li class="nav-item"><a class="nav-link" href="/game">GAME</a></li>
-          <li class="nav-item"><a class="nav-link" href="/aboutus">ABOUT US</a></li>
-          <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
-        </ul>
-      </nav>
+    <div class="d-flex flex-row justify-content-between" style="position: fixed">
+      <!-- <div style="position:fixed;"> -->
+        <nav class="nav-tab navbar-light bg-light d-flex flex-column" style="width: 250px; height: 100vh; float: left; margin-top: none;">
+          <a class="navbar-brand" style="margin-left: 10%; padding-top: 30px; font-size: 25px"><strong>SECUREHUB</strong></a>
+          <ul class="navbar-nav" style="padding: 20px">
+            <li class="nav-item"><a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="/stats">STATISTICS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/password">PASSWORDS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/game">GAME</a></li>
+            <li class="nav-item"><a class="nav-link" href="/aboutus">ABOUT US</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
+          </ul>
+        </nav>
     </div>
+    
     <!--COLUMN 1 ===== PATH-->
-    <div>
-      <h1 class="d-flex justify-content-center" style="font-size: 25px; margin-top: 10px;"><strong>SIMPLE CYBERSECURITY QUIZ</strong></h1>
-      <p>Let's see how well protected and informed you are in cybersecurity!!</p>
+    <div class = "info w-100 p-3" style="">
+      <h1 class="d-flex justify-content-center" style="font-size: 25px;"><strong>SIMPLE CYBERSECURITY QUIZ</strong></h1>
+      <p class="d-flex justify-content-center">Let's see how well protected and informed you are in cybersecurity!!</p>
 
       <!--testing new popup w/ js-->
-      <div id="maincontent">
-        <button id="q0" onclick="displayQuestion(0)">Question 1</button>
-        <button id="q1" onclick="displayQuestion(1)">Question 2</button>
-        <button id="q2" onclick="displayQuestion(2)">Question 3</button>
-        <button id="q3" onclick="displayQuestion(3)">Question 4</button>
-        <button id="q4" onclick="displayQuestion(4)">Question 5</button>
-        <button id="q5" onclick="displayQuestion(5)">Question 6</button>
+      <div id="maincontent" class="d-flex flex-column">
+        <img src= "{{ url_for('static', filename='assets/pw1_button.png') }}" id="q0 overlay" onclick="displayQuestion(0)">
+        <img src= "{{ url_for('static', filename='assets/pw2_button.png') }}" id="q1" onclick="displayQuestion(1)">
+        <img src= "{{ url_for('static', filename='assets/multi_authen_button.png') }}" id="q2" onclick="displayQuestion(2)">
+        <img src= "{{ url_for('static', filename='assets/vpn_button.png') }}" id="q3" onclick="displayQuestion(3)">
+        <img src= "{{ url_for('static', filename='assets/software_button.png') }}" id="q4" onclick="displayQuestion(4)">
+        <img src= "{{ url_for('static', filename='assets/https_button.png') }}" id="q5" onclick="displayQuestion(5)">
+        <img src= "{{ url_for('static', filename='assets/websites_button.png') }}" id="q6" onclick="displayQuestion(6)">
+        <img src= "{{ url_for('static', filename='assets/cookies_button.png') }}" id="q7" onclick="displayQuestion(7)">
       </div>
 
       <div id="overlay"></div>
-      <div id="popup" class="card">
+      <div id="popup" class="card" style="margin: 20px">
         <div class="popupcontrols">
           <span id="popupclose">x</span>
         </div>
         <div class="popupcontent">
           <div class="box">
             <!--needs to be changed-->
-            <h2 style="font-size: 20px;" id="questionText"></h2>
+            <h2 style="font-size: 20px; float: center" id="questionText"></h2>
             <!---->
             <div class="question">
               <div class="answer-choice">
@@ -90,4 +91,16 @@
     </div>
 </div>
 </body>
+
+<style>
+  img {
+    background-color:transparent;
+    width: 20%;
+    height: 20%;
+  }
+  img:hover {
+    opacity: 0.5;
+  }
+</style>
+
 </html>
