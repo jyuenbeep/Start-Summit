@@ -4,9 +4,9 @@ html {
 
 h1 {
     font-size: 30px;
-    width: 75%;
+    width: 65%;
     text-align: center;
-    margin-left: auto;
+    margin-left: 330px;
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -29,7 +29,6 @@ button {
     border-radius: 10px;
     margin-top: 20px;
     margin-left: 10px;
-    
 }
 
 button:hover {
@@ -38,15 +37,15 @@ button:hover {
 
 
 img {
-    margin-left: 25%;
+    margin-left: 35%;
     max-width: 50%;
     background-color: white;
     border-radius: 10px;
-
 }
 
 p {
     font-size: 20px;
     text-align: center;
-
+    width: 65%;
+    margin-left: 330px;
 }
