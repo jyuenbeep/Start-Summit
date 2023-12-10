@@ -55,7 +55,7 @@
            
             <div class="form-group">
                 <label for="message">Message:</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" style="background-color: rgb(230, 232, 234); border-radius: 30px; height: 150px; width: 300px; text-align: left; resize: vertical"></textarea
+                <textarea class="form-control" id="message" rows="6" placeholder="Enter your message" style="background-color: rgb(230, 232, 234); border-radius: 30px; height: 200px; width: 400px; text-align: left; resize: vertical"></textarea
                   <span class="focus-input100"></span>
             </div>
          
@@ -65,6 +65,17 @@
             <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
         </form>
     </div>
+
+    <script>
+      // Add an event listener to the textarea to dynamically adjust the container height
+      document.getElementById('message').addEventListener('input', function() {
+          // Get the height of the textarea
+          var textareaHeight = this.scrollHeight;
+          
+          // Set the new height for the container
+          document.getElementById('contactContainer').style.height = (textareaHeight + 300) + 'px';
+      });
+  </script>
 </body>
 </html>
 
