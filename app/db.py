@@ -1,6 +1,7 @@
 import csv
 import sqlite3
 import random 
+import codecs
 
 # org_list = get_column("organisation")
 # records_list = get_column("records lost")
@@ -10,7 +11,7 @@ import random
 
 def model_specified(colArr, recordMin, yearMin):
     dataDict = {}
-    with open('data_breaches.csv', encoding="utf-8") as f:
+    with open('data_breaches.csv', encoding='ISO-8859-1') as f:
         r = csv.DictReader(f)
         for row in r:
             if (row["date"]!=''):
