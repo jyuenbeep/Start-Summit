@@ -26,27 +26,30 @@ const correctBank = ["a1", "a2", "a1", "a1", "a1", "a1", "a2", "a1"]
 const wrongBank = ["a2", "a1", "a2", "a2", "a2", "a2", "a1", "a2"]
 
 const topicBank = [
-    "Using password manager", //1
-    "Creating a strengthened password", //2
-    "Using 2FA(multi-factor authentication)", //3
-    "Using a VPN", //4
-    "Implementing applications or software", //5
+    "Using Password Managers", //1
+    "Creating A Strengthened Password", //2
+    "Using 2FA (Multi-Factor Authentication)", //3
+    "Using A VPN", //4
+    "Implementing Applications or Software", //5
     "Internet Protocol", //6
-    "Dangers of accepting cookies", //7
+    "Dangers of Accepting Cookies", //7
     "Phishing", //8
 ]
 
 const infoBank = [
     // 1
     `Here are some recommendations to improve your password:
-    <p> - Make it at least 15 characters</p>
-    <p> - Make passwords unique — never used before</p>
-    <p> - Randomly generate — utilize a computer or password manaher</p>`,
+    <li> Make it at least 15 characters </li>
+    <li> Make passwords unique — do not repeat the same password for all your accounts </li>
+    <li> Randomly generate — utilize a password manager to generate and store your passwords </li>`,
     // 2
     `Utilizing PIN numbers, authentication application or confirmation 
     text on your phone, or fingerprint or face ID to prevent hackers from being`,
     // 3
-    "[info for 2FA]",
+    `Multifactor authentication is a multi-step login process where users have to enter more than just the password to access their account. This can include:
+    <li> A code sent to the linked email</li>
+    <li> A code sent to the linked phone numbers</li>
+    <li> Third party authentication app (like Duo)</li>`,
     // 4
     "Enhance cybersecurity by installing trusted software like antivirus protection softwarres like NordVPN to protect against scammers.",
     // 5

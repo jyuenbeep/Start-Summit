@@ -61,7 +61,7 @@ button {
 }
 
 button:hover {
-    background-color: #B9BBB6;
+    background-color: #81B29A;
   }
 
 .btn {
@@ -74,7 +74,7 @@ button:hover {
 
 
 img {
-    margin-left: 12.5%;
+    /* margin-left: 12.5%; */
     max-width: 50%;
     background-color: white;
 }
@@ -87,7 +87,7 @@ img {
     display: grid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     /* margin: 8px; */
-    padding: 10px;
+    /* padding: 10px; */
   }
 
   .input-field {

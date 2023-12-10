@@ -45,36 +45,42 @@
         <p class="text-center">Let's see how well protected and informed you are in cybersecurity!!</p>
         <div class="d-flex justify-content-center">
           <img src="{{ url_for('static', filename='assets/pw1_button.png') }}" id="q0 overlay"
-          onclick="displayQuestion(0)">
+          onclick="displayQuestion(0)" class="middle-side">
         </div>
         <div class="d-flex justify-content-center">
-          <img src="{{ url_for('static', filename='assets/pw2_button.png') }}" id="q1" onclick="displayQuestion(1)">
+          <img src="{{ url_for('static', filename='assets/pw2_button.png') }}" id="q1" 
+          onclick="displayQuestion(1)" class="right-side">
         </div>
         <div class="d-flex justify-content-center">
-          <img src="{{ url_for('static', filename='assets/multi_authen_button.png') }}" id="q2"
-          onclick="displayQuestion(2)">
+          <img src="{{ url_for('static', filename='assets/multi_authen_button.png') }}" id="q2" 
+          onclick="displayQuestion(2)" class="middle-side">
         </div>
         <div class="d-flex justify-content-center">
-          <img src="{{ url_for('static', filename='assets/vpn_button.png') }}" id="q3" onclick="displayQuestion(3)">
+          <img src="{{ url_for('static', filename='assets/vpn_button.png') }}" id="q3" 
+          onclick="displayQuestion(3)" class="left-side">
         </div>
         <div class="d-flex justify-content-center">
-          <img src="{{ url_for('static', filename='assets/software_button.png') }}" id="q4" onclick="displayQuestion(4)">
+          <img src="{{ url_for('static', filename='assets/software_button.png') }}" id="q4" 
+          onclick="displayQuestion(4)" class="middle-side">
         </div>
         <div class="d-flex justify-content-center">
-          <img src="{{ url_for('static', filename='assets/https_button.png') }}" id="q5" onclick="displayQuestion(5)">
+          <img src="{{ url_for('static', filename='assets/https_button.png') }}" id="q5" 
+          onclick="displayQuestion(5)" class="right-side">
         </div>
         <div class="d-flex justify-content-center">
-          <img src="{{ url_for('static', filename='assets/websites_button.png') }}" id="q6" onclick="displayQuestion(6)">
+          <img src="{{ url_for('static', filename='assets/websites_button.png') }}" id="q6" 
+          onclick="displayQuestion(6)" class="middle-side">
         </div>
         <div class="d-flex justify-content-center">
-          <img src="{{ url_for('static', filename='assets/cookies_button.png') }}" id="q7" onclick="displayQuestion(7)">
+          <img src="{{ url_for('static', filename='assets/cookies_button.png') }}" id="q7" 
+          onclick="displayQuestion(7)" class="left-side">
         </div>
       </div>
       <!---->
       <div class="d-flex flex-column">
         <div class="d-flex flex-column">
           <div id="overlay"></div>
-          <div id="popup" class="card" style="margin: 20px">
+          <div id="popup" class="card p-3 m-3" style="margin: 20px">
             <div class="popupcontrols">
               <span id="popupclose">x</span>
             </div>
@@ -83,8 +89,8 @@
                 <!--needs to be changed-->
                 <h2 style="font-size: 20px; float: center" id="questionText"></h2>
                 <!---->
-                <div class="question">
-                  <div class="answer-choice">
+                <div class="question d-flex justify-content-center">
+                  <div class="answer-choice" style="padding-right: 20px;">
                     <button id="a1">Yes</button>
                   </div>
                   <div class="answer-choice">
@@ -101,7 +107,7 @@
           <!--testing end-->
       </div>
       <!--COLUMN 2 ===== DISPLAYING ANSWERS-->
-      <div class="card right-card d-flex justify-content-center m-5 p-5 side-box">
+      <div class="card right-card d-flex justify-content-center m-3 p-3 side-box">
         <h1 id="topic">
           OUR MISSION:
         </h1>
@@ -111,8 +117,8 @@
         <!--link here-->
         <!--correct/wrong-->
         <br>
-        <div class="d-flex flex-row">
-          <h2>Correct:<p id="correctNum">0</p>
+        <div class="d-flex justify-content-center results">
+          <h2 style="margin-right: 100px;">Correct:<p id="correctNum">0</p>
           </h2>
           <h2>Wrong:<p id="wrongNum">0</p>
           </h2>
@@ -129,7 +135,6 @@
 <style>
   img {
     background-color: transparent;
-    margin-left: 0%;
     width: 20%;
   }
 
@@ -138,7 +143,7 @@
   }
 
   .info {
-    max-width: 80%;
+    max-width: 84%;
   }
 
   .side-box {
@@ -149,6 +154,37 @@
   .quiz {
     max-width: 50%
   }
+
+  .card {
+    /* padding: 10px; */
+    border-radius: 15px;
+  }
+
+  .results {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  button {
+    background-color: #f4f1DE;
+    border-color: #3D405B;
+
+    border-radius: 10px;
+    text-align: center;
+
+  }
+
+  .left-side {
+    margin-right: 25%;
+  }
+
+  .middle-side {
+  }
+
+  .right-side {
+    margin-left: 25%;
+  }
+
 </style>
 
 </html>
