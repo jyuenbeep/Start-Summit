@@ -49,7 +49,7 @@ $ brew install python
 
 ```
 $ pip install Flask
-$ pip install matplotlb
+$ pip install matplotlib
 ```
 
 </br>
@@ -78,11 +78,11 @@ $ python3 __init__.py
 
 ### Roles
 
-`Team lead:` Jasmine, Seren
+`Team lead:` Jasmine, Serenity
 
 `Developer:` Jasmine, Bella, Carolyn, Laurie, Kristen, Ivina, Isabel
 
-`Business Strategist:` Seren, Grace, Isabel
+`Business Strategist:` Serenity, Grace, Isabel
 
 `Data Analysts:` Bella, Carolyn,
 
