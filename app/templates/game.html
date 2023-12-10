@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <head>
-    <title>Cyber Game</title>
-    <meta charset="UTF-8">
-    <body style="background-color:#f0edda">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/game_style.css') }}">
+  <title>Cyber Game</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- stylesheet -->
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/game_style.css') }}">
 
 </head>
 
 <body style = "background-color:#f0edda">
-  <div class="d-flex flex-row justify-content-between">
-    <div>
-      <nav class="nav-tab navbar-light bg-light d-flex flex-column" style="width: 250px; height: 100vh; float: left">
+  <div class="d-flex flex-row justify-content-between" style="position: fixed">
+    <!-- <div style="position:fixed;"> -->
+      <nav class="nav-tab navbar-light bg-light d-flex flex-column" style="width: 250px; height: 100vh; float: left;">
         <a class="navbar-brand" style="margin-left: 10%; margin-top: 30px; font-size: 25px"><strong>SECUREHUB</strong></a>
         <ul class="navbar-nav" style="margin: 20px">
           <li class="nav-item"><a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a></li>
@@ -23,18 +26,15 @@
           <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
         </ul>
       </nav>
-    </div>
+  </div>
 
+  <div class="container justify-content-center info">
     <h1>Choose Your Own Adventure (Cybersecurity edition)</h1>
-
-    <p>
-
-    </p>
-    <img src = "https://cdn.vectorstock.com/i/preview-1x/13/39/man-working-on-computer-at-home-vector-42211339.jpg" alt = "guyPC">
-    </br>
+    <img style="width: 60%; margin-left: 20%" src = "https://cdn.vectorstock.com/i/preview-1x/13/39/man-working-on-computer-at-home-vector-42211339.jpg" alt = "guyPC">
     <a href="/page1" class="btn d-flex justify-content-center"><button>Start</button></a>
-
-</br>
-
+  </div>
+  </br>
 </body>
+
+
 </html>
