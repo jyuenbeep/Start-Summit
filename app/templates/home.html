@@ -1,105 +1,153 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>HOME</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_style.css') }}"> -->
 
-    <!-- javascript -->
-    <!-- <script src="{{ url_for('static', filename='js/quiz_script.js') }}" defer></script> -->
-    <script src="{{ url_for('static', filename='js/home_quiz.js') }}" defer></script>
+<head>
+  <title>HOME</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_style.css') }}"> -->
 
-  </head>
-  
-  <body style = "background-color:#f0edda">
-    <div class="d-flex flex-row justify-content-between" style="position: fixed">
-      <!-- <div style="position:fixed;"> -->
-        <nav class="nav-tab navbar-light bg-light d-flex flex-column" style="width: 250px; height: 100vh; float: left; margin-top: none;">
-          <a class="navbar-brand" style="margin-left: 10%; padding-top: 30px; font-size: 25px"><strong>SECUREHUB</strong></a>
-          <ul class="navbar-nav" style="padding: 20px">
-            <li class="nav-item"><a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="/stats">STATISTICS</a></li>
-            <li class="nav-item"><a class="nav-link" href="/password">PASSWORDS</a></li>
-            <li class="nav-item"><a class="nav-link" href="/game">GAME</a></li>
-            <li class="nav-item"><a class="nav-link" href="/aboutus">ABOUT US</a></li>
-            <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
-          </ul>
-        </nav>
-    </div>
-    
-    <!--COLUMN 1 ===== PATH-->
-    <div class = "info w-100 p-3" style="">
-      <h1 class="d-flex justify-content-center" style="font-size: 25px;"><strong>SIMPLE CYBERSECURITY QUIZ</strong></h1>
-      <p class="d-flex justify-content-center">Let's see how well protected and informed you are in cybersecurity!!</p>
+  <!-- javascript -->
+  <!-- <script src="{{ url_for('static', filename='js/quiz_script.js') }}" defer></script> -->
+  <script src="{{ url_for('static', filename='js/home_quiz.js') }}" defer></script>
+
+</head>
+
+<body style="background-color:#f0edda">
+  <div class="d-flex flex-row justify-content-between" style="position: fixed">
+    <!-- <div style="position:fixed;"> -->
+    <nav class="nav-tab navbar-light bg-light d-flex flex-column"
+      style="width: 250px; height: 100vh; float: left; margin-top: none;">
+      <a class="navbar-brand"
+        style="margin-left: 10%; padding-top: 30px; font-size: 25px"><strong>SECUREHUB</strong></a>
+      <ul class="navbar-nav" style="padding: 20px">
+        <li class="nav-item"><a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="/stats">STATISTICS</a></li>
+        <li class="nav-item"><a class="nav-link" href="/password">PASSWORDS</a></li>
+        <li class="nav-item"><a class="nav-link" href="/game">GAME</a></li>
+        <li class="nav-item"><a class="nav-link" href="/aboutus">ABOUT US</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!--COLUMN 1 ===== PATH-->
+  <div class="info">
+    <div class="d-flex flex-row">
 
       <!--testing new popup w/ js-->
-      <div id="maincontent" class="d-flex flex-column">
-        <img src= "{{ url_for('static', filename='assets/pw1_button.png') }}" id="q0 overlay" onclick="displayQuestion(0)">
-        <img src= "{{ url_for('static', filename='assets/pw2_button.png') }}" id="q1" onclick="displayQuestion(1)">
-        <img src= "{{ url_for('static', filename='assets/multi_authen_button.png') }}" id="q2" onclick="displayQuestion(2)">
-        <img src= "{{ url_for('static', filename='assets/vpn_button.png') }}" id="q3" onclick="displayQuestion(3)">
-        <img src= "{{ url_for('static', filename='assets/software_button.png') }}" id="q4" onclick="displayQuestion(4)">
-        <img src= "{{ url_for('static', filename='assets/https_button.png') }}" id="q5" onclick="displayQuestion(5)">
-        <img src= "{{ url_for('static', filename='assets/websites_button.png') }}" id="q6" onclick="displayQuestion(6)">
-        <img src= "{{ url_for('static', filename='assets/cookies_button.png') }}" id="q7" onclick="displayQuestion(7)">
-      </div>
-
-      <div id="overlay"></div>
-      <div id="popup" class="card" style="margin: 20px">
-        <div class="popupcontrols">
-          <span id="popupclose">x</span>
+      <div id="maincontent" class="d-flex flex-column quiz">
+        <h1 class="text-center" style="font-size: 25px;"><strong>SIMPLE CYBERSECURITY QUIZ</strong></h1>
+        <p class="text-center">Let's see how well protected and informed you are in cybersecurity!!</p>
+        <div class="d-flex justify-content-center">
+          <img src="{{ url_for('static', filename='assets/pw1_button.png') }}" id="q0 overlay"
+          onclick="displayQuestion(0)">
         </div>
-        <div class="popupcontent">
-          <div class="box">
-            <!--needs to be changed-->
-            <h2 style="font-size: 20px; float: center" id="questionText"></h2>
-            <!---->
-            <div class="question">
-              <div class="answer-choice">
-                <button id="a1">Yes</button>
-              </div>
-              <div class="answer-choice">
-                <button id="a2">No</button>
-              </div>
-            </div>
-          </div>
+        <div class="d-flex justify-content-center">
+          <img src="{{ url_for('static', filename='assets/pw2_button.png') }}" id="q1" onclick="displayQuestion(1)">
         </div>
-
-        <div>
-          <h1 id="answerCheck"></h1>
+        <div class="d-flex justify-content-center">
+          <img src="{{ url_for('static', filename='assets/multi_authen_button.png') }}" id="q2"
+          onclick="displayQuestion(2)">
         </div>
-      </div>
-    <!--testing end-->
-
-    </div>
-    <!--COLUMN 2 ===== DISPLAYING ANSWERS-->
-    <div class = "card right-card d-flex justify-content-center m-5 p-5">
-      <h1 id="topic"></h1>
-      <p id="info"></p>
-      <!--link here-->
-      <!--correct/wrong-->
-      <div class="d-flex flex-row">
-        <h2>Correct:<p id="correctNum">0</p></h2>
-        <h2>Wrong:<p id="wrongNum">0</p></h2>
+        <div class="d-flex justify-content-center">
+          <img src="{{ url_for('static', filename='assets/vpn_button.png') }}" id="q3" onclick="displayQuestion(3)">
+        </div>
+        <div class="d-flex justify-content-center">
+          <img src="{{ url_for('static', filename='assets/software_button.png') }}" id="q4" onclick="displayQuestion(4)">
+        </div>
+        <div class="d-flex justify-content-center">
+          <img src="{{ url_for('static', filename='assets/https_button.png') }}" id="q5" onclick="displayQuestion(5)">
+        </div>
+        <div class="d-flex justify-content-center">
+          <img src="{{ url_for('static', filename='assets/websites_button.png') }}" id="q6" onclick="displayQuestion(6)">
+        </div>
+        <div class="d-flex justify-content-center">
+          <img src="{{ url_for('static', filename='assets/cookies_button.png') }}" id="q7" onclick="displayQuestion(7)">
+        </div>
       </div>
       <!---->
-    </div>
-</div>
+      <div class="d-flex flex-column">
+        <div class="d-flex flex-column">
+          <div id="overlay"></div>
+          <div id="popup" class="card" style="margin: 20px">
+            <div class="popupcontrols">
+              <span id="popupclose">x</span>
+            </div>
+            <div class="popupcontent">
+              <div class="box">
+                <!--needs to be changed-->
+                <h2 style="font-size: 20px; float: center" id="questionText"></h2>
+                <!---->
+                <div class="question">
+                  <div class="answer-choice">
+                    <button id="a1">Yes</button>
+                  </div>
+                  <div class="answer-choice">
+                    <button id="a2">No</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div>
+              <h1 id="answerCheck"></h1>
+            </div>
+          </div>
+          <!--testing end-->
+      </div>
+      <!--COLUMN 2 ===== DISPLAYING ANSWERS-->
+      <div class="card right-card d-flex justify-content-center m-5 p-5 side-box">
+        <h1 id="topic">
+          OUR MISSION:
+        </h1>
+        <p id="info">
+          We aim to safeguard personal privacy throughout our community by raising awareness about the risks of big corporations' data collection, providing resources to mitigate cybersecurity threats, and enhancing education on data collection risks and breaches through our website.
+        </p>
+        <!--link here-->
+        <!--correct/wrong-->
+        <br>
+        <div class="d-flex flex-row">
+          <h2>Correct:<p id="correctNum">0</p>
+          </h2>
+          <h2>Wrong:<p id="wrongNum">0</p>
+          </h2>
+        </div>
+        <!---->
+      </div>
+      </div>
+    <!---->
+  </div>
+  </div>
+  </div>
 </body>
 
 <style>
   img {
-    background-color:transparent;
+    background-color: transparent;
+    margin-left: 0%;
     width: 20%;
-    height: 20%;
   }
+
   img:hover {
     opacity: 0.5;
+  }
+
+  .info {
+    max-width: 80%;
+  }
+
+  .side-box {
+    float: right;
+    width: 100%;
+  }
+
+  .quiz {
+    max-width: 50%
   }
 </style>
 

@@ -1,64 +1,73 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="">
     <body style="background-color:#f0edda">
-</head>
-<body style = "background-color:#f0edda">
-  <div class="d-flex flex-row justify-content-between">
-    <div>
-      <nav class="nav-tab navbar-light bg-light d-flex flex-column" style="width: 250px; height: 100vh; float: left">
-        <a class="navbar-brand" style="margin-left: 10%; margin-top: 30px; font-size: 25px"><strong>SECUREHUB</strong></a>
-        <ul class="navbar-nav" style="margin: 20px">
-          <li class="nav-item"><a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="/stats">STATISTICS</a></li>
-          <li class="nav-item"><a class="nav-link" href="/password">PASSWORDS</a></li>
-          <li class="nav-item"><a class="nav-link" href="/game">GAME</a></li>
-          <li class="nav-item"><a class="nav-link" href="/aboutus">ABOUT US</a></li>
-          <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
-        </ul>
-      </nav>
+    <title>Contact Form</title>
+    
+  </head>
+  <body style = "background-color:#f0edda">
+    <div class="d-flex flex-row justify-content-between">
+      <div>
+        <nav class="nav-tab navbar-light bg-light d-flex flex-column" style="width: 250px; height: 100vh; float: left">
+          <a class="navbar-brand" style="margin-left: 10%; margin-top: 30px; font-size: 25px"><strong>SECUREHUB</strong></a>
+          <ul class="navbar-nav" style="margin: 20px">
+            <li class="nav-item"><a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="/stats">STATISTICS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/password">PASSWORDS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/game">GAME</a></li>
+            <li class="nav-item"><a class="nav-link" href="/aboutus">ABOUT US</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+<body>
+    <div class="container mt-5" style="border-radius:30px; font-family:'Nunito'; width: 750px; height: 550px; background-color: white; text-align: left; min-height: 600px; margin: auto; overflow: hidden">
+      <br>
+        <h2>Contact Us</h2>
+        <form>
+          <form style="text-align: left;">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" style="background-color: rgb(230, 232, 234); width: 300px; border-radius: 30px; text-align: left;">
+            </div>
+           
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" style="background-color: rgb(230, 232, 234); width: 300px; border-radius: 30px; text-align: left;">
+            </div>
+           
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" style="background-color: rgb(230, 232, 234); border-radius: 30px; height: 150px; width: 300px; text-align: left; resize: vertical"></textarea
+                  <span class="focus-input100"></span>
+            </div>
+         
+            <button type="submit" class="btn form-btn" value="submit"
+                style="background:-webkit-linear-gradient(right, #031888, #6096fd, #aab6fb, #fb788e); width: 200px; color: white; border-radius: 30px; margin-top: 10px"> Submit
+              </button>
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        </form>
     </div>
-
-
-<p><br></p>
-<div class="container">
-    <form action="action_page.php" method="POST">
-
-        <div>
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-        </div>
-        
-        <div>
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-    </div>
-
-    <div>
-        <label for="Email">Email</label>
-            <input type="text" id="email" name="lastname" placeholder="Email" required>
-    </div>
-
-        <div>
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
-        </div>
-        
-        <input type="submit" value="Submit">
-
-    </form>
-</div>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
 

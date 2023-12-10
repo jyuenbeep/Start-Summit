@@ -74,7 +74,7 @@ function displayQuestion(qNum) {
 
     function doneAnswering() {
         answerClicked[qNum] = true
-        document.getElementById("q"+qNum).style.backgroundColor = "lightblue"
+        // document.getElementById("q"+qNum).style.backgroundColor = "lightblue"
     }
 
     document.getElementById(correctBank[qNum]).onclick = function() {
