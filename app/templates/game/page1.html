@@ -8,54 +8,33 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/game_style.css') }}">
 
 </head>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/"><strong>SECUREHUB</strong></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/stats">STATISTICS</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/resources">RESOURCES</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/password">PASSWORDS</a>
-    </li>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/quiz">QUIZ</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/game">GAME</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/aboutus">ABOUT US</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/contact">CONTACT</a>
-    </li>
-  </ul>
-</div>
-</nav>
-
 <body>
+<div class="d-flex flex-row justify-content-between" style="position: fixed">
+  <!-- <div style="position:fixed;"> -->
+    <nav class="nav-tab navbar-light bg-light d-flex flex-column" style="width: 250px; height: 100vh; float: left; margin-top: none;">
+      <a class="navbar-brand" style="margin-left: 10%; padding-top: 30px; font-size: 25px"><strong>SECUREHUB</strong></a>
+      <ul class="navbar-nav" style="padding: 20px">
+        <li class="nav-item"><a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="/stats">STATISTICS</a></li>
+        <li class="nav-item"><a class="nav-link" href="/password">PASSWORDS</a></li>
+        <li class="nav-item"><a class="nav-link" href="/game">GAME</a></li>
+        <li class="nav-item"><a class="nav-link" href="/aboutus">ABOUT US</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">CONTACT</a></li>
+      </ul>
+    </nav>
+</div>
+
+<div class = "info">
     <h1>New Laptop!</h1>
     <p>You recently got a new laptop! What's the first thing you do on it?</p>
     <img src = "https://pngimg.com/d/laptop_PNG101837.png" alt="laptop">
 
     <div class ="row-3 d-flex justify-content-center">
-    <a href = "/page2a"><button>A. Download your favorite game</button></a>
-    <a href = "/page2b"><button>B. Surf the web </button></a>
-    <a href = "/pageshutdown"><button>C. Shut down the laptop</button></a>
-</div>
+      <a href = "/page2a"><button>A. Download your favorite game</button></a>
+      <a href = "/page2b"><button>B. Surf the web </button></a>
+      <a href = "/pageshutdown"><button>C. Shut down the laptop</button></a>
+    </div>
 </br>
-
+</div>
 </body>
 </html>
