@@ -86,5 +86,5 @@ $ python3 __init__.py
 
 `Data Analysts:` Bella, Carolyn,
 
-`Engineer:` Jasmine, Laurie, Kristen, Ivina, Grace
+`Engineer:` Jasmine, Laurie, Kristen, Ivina
 </br>
