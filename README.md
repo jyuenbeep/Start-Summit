@@ -78,7 +78,7 @@ $ python3 __init__.py
 
 ### Roles
 
-`Team lead:` Jasmine, Serenity
+`Team Lead:` Jasmine, Serenity
 
 `Developer:` Jasmine, Bella, Carolyn, Laurie, Kristen, Ivina, Isabel
 
