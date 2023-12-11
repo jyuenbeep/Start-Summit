@@ -11,7 +11,7 @@ import codecs
 
 def model_specified(colArr, recordMin, yearMin):
     dataDict = {}
-    with open('data_breaches.csv', encoding='ISO-8859-1') as f:
+    with open('data_breaches.csv', 'r', encoding='utf-8') as f:
         r = csv.DictReader(f)
         for row in r:
             if (row["date"]!=''):

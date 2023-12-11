@@ -131,7 +131,7 @@ def makeRecordTable(rMin, yMin):
     return htmlTable
 
 def writeHTML(htmlTemplate, file):
-    with open("templates/"+file, 'w') as f:
+    with open("templates/"+file, 'w', encoding='utf-8') as f:
         f.write(htmlTemplate)
     f.close()
 
@@ -193,11 +193,13 @@ def statsTablePage():
         dataDict = model_specified(["records lost", "year   "], recordMin, yearMin)
         arr = createArray(dataDict)
         plot(arr, len(arr[0]))
+        # print(arr)
         # making table and overwriting into HTML
         table = makeRecordTable(recordMin, yearMin)
         writeHTML(html_template.format(DATA_TABLE=table), "table.html")
     else:
         table = makeRecordTable(0, 0)
+        # print(table)
         writeHTML(html_template.format(DATA_TABLE=table), "table.html")
     return render_template("table.html")
 

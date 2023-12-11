@@ -32,6 +32,7 @@ def plot(orgList, len):
     x = np.arange(0, len, 1)
     xticks = orgList[2]
     y = np.vstack(orgList[0])
+    # y = np.array(orgList[0])
 
     fig, ax = plt.subplots()
     ax.plot(x, y, linewidth=10)
