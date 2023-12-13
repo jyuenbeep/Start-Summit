@@ -252,6 +252,7 @@ def popup2apage():
 
 if __name__ == "__main__":
     app.debug = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.run(host='0.0.0.0')
 
 
