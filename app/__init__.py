@@ -18,7 +18,7 @@ import matplotlib
 matplotlib.pyplot.switch_backend('Agg')
 
 app = Flask(__name__)
-app.secret_key = "23bd2dcea35c795e204d397157f3d55bf1afda7db6519a46f9d1e5a5f02ed45b"
+app.secret_key = "our key"
 
 
 # MAKING TABLES ======================================================================
